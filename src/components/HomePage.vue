@@ -9,12 +9,16 @@
   
      <div id="nav row">
     <div class="col">
+          <router-link to="/schedule">
           <img src="../assets/standing2.jpg" height="200" width="340">
           <h3>Match Schedule</h3>
+          </router-link>
    </div>
    <div class="col mt-1 ">
+<router-link to="/standings">
           <img src="../assets/football.jpg" height="200" width="340">
              <h3>Standings</h3>
+             </router-link>
    </div>
    <div class="col mt-1 ">
           <img src="../assets/schedule.jpg" height="200" width="340">
@@ -64,7 +68,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   /* h3 {
     margin: 40px 0 0;
   }

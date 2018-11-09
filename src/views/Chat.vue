@@ -1,16 +1,17 @@
 <template>
 <div class="home">
-<HomePage/>
+<ChatLogin/>
 </div>
 </template>
+
 <script> // @ is an alias to /src
-import HomePage from '@/components/HomePage.vue'
+import ChatLogin from '@/components/ChatLogin.vue'
 
 export default {
 
   name: 'chat',
   components: {
-    HomePage
+    ChatLogin
   }
 }
 
