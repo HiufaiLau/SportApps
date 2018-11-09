@@ -1,6 +1,6 @@
 <template>
 <div>
-<form class="dropdown-menu p-4">
+<!-- <form class="dropdown-menu p-4"> -->
   <div class="form-group">
     <label for="exampleDropdownFormEmail2">Email address</label>
     <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
@@ -16,12 +16,12 @@
     </label>
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+<!-- </form> -->
 </div>
 </template>
 
 <script> 
 export default {
-  name: 'chatLogin'
+  name: 'ChatLogin'
 }
 </script>
