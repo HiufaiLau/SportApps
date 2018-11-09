@@ -1,17 +1,25 @@
 <template>
-  <div class="standingsTable">
-    <h1>This is an about page</h1>
+  <div class="schedule">
+      <StandingsHeader/>
+     <StandingsTable/>
   </div>
 </template>
 <script> // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+
+
+import StandingsHeader from '@/components/StandingsHeader.vue'
+import StandingsTable from '@/components/StandingsTable.vue'
 
 export default {
 
-  name: 'standings',
+  name: 'schedule',
   components: {
-    // HelloWorld
+StandingsHeader,
+StandingsTable
   }
 }
 
 </script>
+<style>
+
+</style>

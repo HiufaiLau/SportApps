@@ -1,0 +1,36 @@
+<template>
+<div>
+   <div class="myHeader" align="left">
+      <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
+   <span style="font-size:30px; margin-top:1%"> Standings</span>
+    </div>
+    <div class="dropdown" align="right">
+    <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Teams
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu ">
+      <li align="center"><a href="#">Dortmund</a></li>
+      <li align="center"><a href="#">Bayern</a></li>
+      <li align="center"><a href="#">Hertha Berlin</a></li>
+    </ul>
+  </div>
+</div>
+</template>
+<script> 
+
+
+export default {
+  name: 'standingsheader',
+  components: {
+    
+  }
+}
+
+</script>
+<style>
+.arrow{
+    margin-bottom: 3%;
+}
+.dropdown{
+    margin-right:5%;
+}
+</style>
