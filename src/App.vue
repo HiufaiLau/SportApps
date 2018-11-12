@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav row">
+    <nav class="nav row navbar fixed-top navbar-expand-lg navbar-light bg-light">
+   
       <div class="col mt-2 ">
         <img src="./assets/bundesliga.png" height="120" width="100">
       </div>
-    </div>
+
+    </nav>
     <hr>
 
 
@@ -16,16 +18,35 @@
       <router-link to="/schedule">Matches</router-link> |
       <router-link to="/standings">Standings</router-link> |
       <router-link to="/chat">Chat</router-link>
-
-
     </div>
+  
+<nav class="navbar fixed-bottom  navbar-expand-lg navbar-light bg-light">
+  <router-link to="/">Home</router-link>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav dropup">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
   </div>
 </template>
 <script>
   // import BooksComponent from "@/components/BooksComponent.vue";
   // import OneBookComponent from "@/components/OneBookComponent.vue";
   export default {
-    name: "app"
+    name: "app",
   }
   //     return {
   //       // books: [],

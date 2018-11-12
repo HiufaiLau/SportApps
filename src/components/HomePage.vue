@@ -1,14 +1,7 @@
 <template>
   <div class="header">
-    <!-- <h1>{{ msg }}</h1>
-    <p>
-      For guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p> -->
-  
      <div id="nav row">
-    <div class="col">
+    <div class="col mt-6">
           <router-link to="/schedule">
           <img src="../assets/standing2.jpg" height="200" width="340">
           <h3>Match Schedule</h3>
@@ -69,6 +62,12 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.header {
+    margin-top: 36%;
+}
+img{
+  border-radius: 10px;
+}
   /* h3 {
     margin: 40px 0 0;
   }
