@@ -1,27 +1,27 @@
 <template>
-  <div class="header">
+  <div class="homeHeader">
      <div id="nav" class=" row">
     <div class="col mt-6">
           <router-link to="/schedule">
-          <img src="../assets/standing2.jpg" height="200" width="340">
+          <img src="../assets/standing2.jpg" height="200" width="320">
           <h3>Match Schedule</h3>
           </router-link>
    </div>
    <div class="col mt-1 ">
 <router-link to="/standings">
-          <img src="../assets/football.jpg" height="200" width="340">
+          <img src="../assets/football.jpg" height="200" width="320">
              <h3>Standings</h3>
              </router-link>
    </div>
    <div class="col mt-1 ">
      <router-link to="/allteams">
-          <img src="../assets/schedule.jpg" height="200" width="340">
+          <img src="../assets/schedule.jpg" height="200" width="320">
           <h3>About all teams</h3>
           </router-link>
    </div>
      <div class="col mt-1 mb-1 ">
        <router-link to="/chat">
-          <img src="../assets/chat.jpg" height="200" width="340">
+          <img src="../assets/chat.jpg" height="200" width="320">
           <h3>Chatroom</h3>
       </router-link>
    </div>
@@ -63,7 +63,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.header {
+.homeHeader {
     margin-top: 40%;
     margin-bottom:16%;
 }

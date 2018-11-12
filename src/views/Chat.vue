@@ -1,5 +1,5 @@
 <template>
-<div class="chat">
+<div class="chat" align="center">
 <ChatLogin/>
 </div>
 </template>

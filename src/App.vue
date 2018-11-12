@@ -20,7 +20,7 @@
       <router-link to="/chat">Chat</router-link>
     </div> -->
   
-<nav class="navbar fixed-bottom  navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-bottom  navbar-light bg-light">
   <router-link to="/">Home</router-link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -107,7 +107,7 @@
 
   }
 
-  #nav {
+  /* #nav {
     padding: 30px;
     background-color: black;
   }
@@ -119,7 +119,7 @@
 
   #nav a.router-link-exact-active {
     color: #42b983;
-  }
+  } */
 
   .footer {
     margin-bottom: 4%;

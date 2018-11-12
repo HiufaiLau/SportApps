@@ -1,10 +1,62 @@
 <template>
-    <div class="header">
+   
+        <div class="row">
+        <div class="col">
         <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
         <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
         <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
-        <img src="../assets/Hertha_BSC_Logo.svg.png" alt="Hertha Berlin" height="80" width="80">
-    </div>
+        </div>
+         <div class="col">
+        <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
+        </div>
+         <div class="col">
+        <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
+        </div>
+         <div class="col">
+        <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
+        </div>
+         <div class="col">
+        <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
+        </div>
+         <div class="col">
+        <img src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img class="score" src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" >
+        </div>
+        <div class="col">
+        <img  src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" >
+        </div>
+        </div> 
+   
 </template>
 
 <script>
@@ -13,10 +65,7 @@
     }
 </script>
 <style>
-    .header {
-        margin-top: 40%;
-        margin-bottom: 16%;
-    }
+   
 
     .arrow {
         margin-bottom: 3%;
@@ -36,5 +85,8 @@
     .score{
         margin-right: 3%;
         margin-left: 3%;
+    }
+    .col{
+            margin-bottom: 10%;
     }
 </style>
