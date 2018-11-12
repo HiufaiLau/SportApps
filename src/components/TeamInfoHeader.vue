@@ -7,8 +7,8 @@
     </router-link>
     </div>
     <form class="form-inline my-2 my-lg-0" >
-      <input class="form-control mr-sm-2" align="center"type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" align="center"type="search" placeholder="Search the team" aria-label="Search">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
         </div>
 </template>
@@ -23,16 +23,17 @@
     margin-top: 40%;
     margin-bottom:16%;
 }
-.myHeader{
-    /* margin-top:42%; */
-}
+
 .arrow{
     margin-bottom: 3%;
 }
 .form-control{
-    width: 200px;
+    width: 300px;
 }
 form{
-    margin-left: 8%;
+    margin-left: 10%;
+}
+input{
+    margin-right: 5%;
 }
 </style>
