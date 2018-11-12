@@ -1,9 +1,10 @@
 
 <template>
-
     <div class="myHeader" align="left">
+        <router-link to="/">
       <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
-   <span style="font-size:30px; margin-top:1%"> Matches</span>
+   <span style="font-size:25px; margin-top:1%"> Matches</span>
+    </router-link>
     </div>
 </template>
 <script> // @ is an alias to /src
@@ -20,7 +21,7 @@ export default {
 </script>
 <style>
 .myHeader{
-    margin-top:35%;
+    margin-top:42%;
 }
 .arrow{
     margin-bottom: 3%;

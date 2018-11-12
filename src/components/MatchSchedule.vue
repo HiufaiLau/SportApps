@@ -90,12 +90,11 @@
     /* align-items: flex-end;
    display: flex */
     margin-left: 6%;
-    margin-bottom: 5%;
+    margin-bottom: 20%;
     border-radius: 10px;
   }
 
   .score {
     font-size: 20px;
-    ;
   }
 </style>

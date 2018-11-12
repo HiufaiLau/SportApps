@@ -15,7 +15,7 @@ export default {
 
   name: 'schedule',
   components: {
- MatchSchedule, 
+MatchSchedule, 
 MatchScheduleDate,
 MatchScheduleHeader
   }

@@ -14,12 +14,16 @@
              </router-link>
    </div>
    <div class="col mt-1 ">
+     <router-link to="/allteams">
           <img src="../assets/schedule.jpg" height="200" width="340">
           <h3>About all teams</h3>
+          </router-link>
    </div>
      <div class="col mt-1 mb-1 ">
+       <router-link to="/chat">
           <img src="../assets/chat.jpg" height="200" width="340">
           <h3>Chatroom</h3>
+      </router-link>
    </div>
    </div>
     <!-- <div class="col" style=" padding-top: 20px;">
@@ -53,17 +57,15 @@
 
 <script>
   export default {
-    name: "HomePage",
-    // props: {
-    //   msg: String
-    // }
-  };
+    name: "HomePage"
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .header {
-    margin-top: 36%;
+    margin-top: 40%;
+    margin-bottom:16%;
 }
 img{
   border-radius: 10px;
