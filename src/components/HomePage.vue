@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-     <div id="nav row">
+     <div id="nav" class=" row">
     <div class="col mt-6">
           <router-link to="/schedule">
           <img src="../assets/standing2.jpg" height="200" width="340">
