@@ -7,18 +7,18 @@
       </div>
 
     </nav>
-    <hr>
+    <!-- <hr> -->
 
 
 
     <router-view />
-    <hr>
+    <!-- <hr>
     <div class="footer">
-      <router-link to="/">Home</router-link> |
+    
       <router-link to="/schedule">Matches</router-link> |
       <router-link to="/standings">Standings</router-link> |
       <router-link to="/chat">Chat</router-link>
-    </div>
+    </div> -->
   
 <nav class="navbar fixed-bottom  navbar-expand-lg navbar-light bg-light">
   <router-link to="/">Home</router-link>
@@ -28,13 +28,13 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav dropup">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <router-link to="/schedule">Matches</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+       <router-link to="/standings">Standings</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+       <router-link to="/chat">Chat</router-link>
       </li>
     </ul>
   </div>

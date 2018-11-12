@@ -1,17 +1,17 @@
 <template>
 
   <div class="container">
-    <h4>Group A</h4><span></span>
+    <h4 class="marginForTopNavbar">Group A</h4><span></span>
     <div class="panel panel-default">
       <div class="panel-body matchTable">
         <img class="score" src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" style="margin-right:8%">
         <span class="score"> 2 : 1 </span>
-        <img src="../assets/dortmund.png" alt="FCByern" height="80" width="80" style="margin-left:8%">
+        <img src="../assets/dortmund.png" alt="Dortmund" height="80" width="80" style="margin-left:8%">
         <h6 class="score"><a href="">Highlight video</a> </h6>
         <br>
-        <img class="score" src="../assets/FC_Schalke_04.png" alt="FCByern" height="80" width="80" style="margin-right:8%">
+        <img class="score" src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" style="margin-right:8%">
         <span class="score"> 2 : 1 </span>
-        <img src="../assets/Hertha_BSC_Logo.svg.png" alt="FCByern" height="80" width="80" style="margin-left:8%">
+        <img src="../assets/Hertha_BSC_Logo.svg.png" alt="Hertha Berlin" height="80" width="80" style="margin-left:8%">
         <h6 class="score"><a href="">Highlight video</a> </h6>
       </div>
     </div>
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <h4>Group C</h4>
+    <h4>Group C</h4> 
     <div class="panel panel-default">
       <!-- <div class="panel-heading"> <h4>Group A</h4></div> -->
       <div class="panel-body matchTable">
@@ -74,6 +74,9 @@
   }
 </script>
 <style>
+/* .marginForTopNavbar{
+  margin-top: 5%;
+} */
   .matchTable {
     border-style: groove;
     box-sizing: border-box;

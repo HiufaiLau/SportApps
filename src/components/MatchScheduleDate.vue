@@ -18,6 +18,7 @@ export default {
 </script>
 <style>
 .dates{
+  /* margin-top:20%; */
     margin-bottom: 5%;
 }
 </style>

@@ -19,6 +19,9 @@ export default {
 
 </script>
 <style>
+.myHeader{
+    margin-top:35%;
+}
 .arrow{
     margin-bottom: 3%;
 }

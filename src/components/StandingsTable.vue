@@ -1,5 +1,5 @@
 <template>
-<table class="scoreTable table-sm table-hover" align="center"  style="margin-top:5%;">
+<table class="scoreTable table-sm table-hover" align="center" >
   <thead>
     <tr>
       <th scope="col">Position</th>
@@ -187,8 +187,12 @@ export default {
 
 </script>
 <style>
+.btn{
+    margin-top: 3%;
+}
 .scoreTable{
-    margin-top:5%;
+    margin-top:3%;
+     margin-bottom: 20%;
     background-color: rgba(190, 87, 87, 0.575);
      /* border-style: groove;
     box-sizing: border-box;
@@ -202,7 +206,7 @@ export default {
    display: flex; */
    /* margin-left: 6%;
    margin-bottom: 5%; */
-   border-radius: 10px;
+   border-radius: 8px;
 }
 
 </style>

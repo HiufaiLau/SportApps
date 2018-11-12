@@ -20,6 +20,13 @@ StandingsTable
 }
 
 </script>
-<style>
 
+<style>
+.schedule{
+    width: 350px;
+    height: 800px;
+        margin-left: 3%;
+       
+
+}
 </style>
