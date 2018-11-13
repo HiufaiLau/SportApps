@@ -1,10 +1,14 @@
 <template>
-   
-        <form class="form-inline ">
+  <div class=" myHeader " align="left">
+       <router-link to="/">
+      <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
+   <span style="font-size:25px; margin-top:0%">Teams Info</span>
+   </router-link>
+  <form class="form-inline" align="center">
             <input class="form-control mr-sm-2" align="center" type="search" placeholder="Search the team" aria-label="Search">
-            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+
         </form>
- 
+  </div>
 </template>
 
 <script>
@@ -13,8 +17,15 @@
     }
 </script>
 <style>
+.myHeader{
+    margin-top: 25%;
+}
     .form-control {
-        width: 250px;
+        width: 260px;
+        margin-top: 2%;
+         /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
     }
 
     form {

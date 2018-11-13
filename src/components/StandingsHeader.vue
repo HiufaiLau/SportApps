@@ -28,7 +28,7 @@ export default {
 </script>
 <style>
 .col{
-    margin-top:40%;
+    margin-top:20%;
 }
 .arrow{
     margin-bottom:6%;

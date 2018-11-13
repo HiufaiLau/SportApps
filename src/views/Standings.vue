@@ -23,9 +23,9 @@ StandingsTable
 
 <style>
 .schedule{
-    width: 350px;
-    height: 800px;
-        margin-left: 3%;
+    /* width: 350px;
+    height: 800px; */
+        /* margin-left: 3%; */
        
 
 }

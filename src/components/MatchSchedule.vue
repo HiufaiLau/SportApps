@@ -1,8 +1,8 @@
 <template>
 
-  <div class="container">
-    <h4 class="marginForTopNavbar">Group A</h4><span></span>
-    <div class="panel panel-default">
+  <div class="container" align="center">
+    <h4 class="marginForTopNavbar" align="center">Group A</h4><span></span>
+    <div class="panel panel-default" align="center">
       <div class="panel-body matchTable">
         <img class="score" src="../assets/FCbayern.png" alt="FCByern" height="80" width="80" style="margin-right:8%">
         <span class="score"> 2 : 1 </span>
@@ -80,18 +80,16 @@
   .matchTable {
     border-style: groove;
     box-sizing: border-box;
-    width: 300px;
+    width: 310px;
     height: 280px;
-    border: 1px solid rgb(53, 53, 53);
-    align-content: center;
-    align-self: center;
+    border: none;
+    /* align-content: center;
+    align-self: center; */
     padding-top: 20px;
-    padding-bottom: 40px;
-    /* align-items: flex-end;
-   display: flex */
-    margin-left: 6%;
     margin-bottom: 20%;
     border-radius: 10px;
+    background-color: darkred;
+    opacity: 0.7;
   }
 
   .score {

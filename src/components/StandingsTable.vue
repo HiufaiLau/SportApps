@@ -1,5 +1,5 @@
 <template>
-<table class="scoreTable table-sm table-hover" align="center" >
+<table class="scoreTable table-sm table-hover justified" align="center" >
   <thead>
     <tr>
       <th scope="col">Position</th>
@@ -191,6 +191,12 @@ export default {
     margin-top: 3%;
 }
 .scoreTable{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  text-align: center;
+  width:75%;
+  height:100%;
     margin-top:3%;
      margin-bottom: 20%;
     background-color: rgba(190, 87, 87, 0.575);

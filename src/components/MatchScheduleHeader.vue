@@ -19,7 +19,7 @@ export default {
 </script>
 <style>
 .myHeader{
-    margin-top:42%;
+    margin-top:22%;
 }
 .arrow{
     margin-bottom: 3%;

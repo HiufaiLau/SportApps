@@ -24,16 +24,27 @@
           <v-icon large color="red">event</v-icon>
         </v-btn>
        </router-link>
-
+      <router-link to="/standings">
         <v-btn color="red darken-2" flat value="standings">
           <span>Standings</span>
-          <v-icon large color="red" scr="">futbol</v-icon>
+          <v-icon large color="red">fas fa-futbol</v-icon>
         </v-btn>
-
-        <v-btn color="red darken-2" flat value="nearby">
+      </router-link><router-link to="/allteams">
+        <v-btn color="red darken-2" flat value="allTeams">
+          <span>Teams</span>
+          <v-icon large color="red">fas fa-users</v-icon>
+        </v-btn>
+      </router-link>
+      <router-link to="/chat">
+        <v-btn color="red darken-2" flat value="chat">
+          <span>Chat</span>
+          <v-icon large color="red">far fa-comments</v-icon>
+        </v-btn>
+      </router-link>
+        <!-- <v-btn color="red darken-2" flat value="nearby">
           <span>Stadium</span>
           <v-icon  large color="red">place</v-icon>
-        </v-btn>
+        </v-btn> -->
       </v-bottom-nav>
     </v-card>
    </v-container>
@@ -62,7 +73,7 @@
     
 }
 .backgroundImage{
-  background-image: url("./assets/fbg.jpg"); /* The image used */
+  background-image: url("./assets/Kick.jpg"); /* The image used */
   background-color: red; /* Used if the image is unavailable */
   height: 100%; 
   width:100%;
@@ -70,10 +81,14 @@
   background-size: cover; /* Resize the background image to cover the entire container */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    max-width: 100%;
     /* opacity: 0.7; */
 
 }
 .bottomNav{
 opacity: 0.7;
+}
+.container {
+    max-width: 720px;
 }
 </style>
