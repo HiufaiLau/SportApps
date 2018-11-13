@@ -1,17 +1,15 @@
 <template>
-<div class="home">
-<HomePage/>
-</div>
+ <v-container>
+  <HomePage/>
+ </v-container>
 </template>
-<script> // @ is an alias to /src
-import HomePage from '@/components/HomePage.vue'
 
-export default {
+<script>
+  import HomePage from '@/components/HomePage'
 
-  name: 'home',
-  components: {
- HomePage 
+  export default {
+    components: {
+     HomePage
+    }
   }
-}
-
 </script>

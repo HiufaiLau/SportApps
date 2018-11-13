@@ -1,127 +1,79 @@
 <template>
-  <div id="app">
-    <nav class="nav row navbar fixed-top navbar-expand-lg navbar-light bg-light">
-   
-      <div class="col mt-2 ">
-        <img src="./assets/bundesliga.png" height="120" width="100">
+  <v-app>
+   <v-container class="backgroundImage">
+    <v-container align="center" >
+      <div class="logo row fixed-top navbar-expand-lg navbar-light" >
+        <div class="col mt-2 " align="center">
+          <img src="./assets/bundesliga.png" height="120" width="100">
+        </div>
       </div>
+    </v-container>
 
-    </nav>
-    <!-- <hr> -->
-
-
-
-    <router-view />
-    <!-- <hr>
-    <div class="footer">
-    
-      <router-link to="/schedule">Matches</router-link> |
-      <router-link to="/standings">Standings</router-link> |
-      <router-link to="/chat">Chat</router-link>
-    </div> -->
+      <v-content  >
+        <router-view>  </router-view>
+      </v-content>
   
-<nav class="navbar fixed-bottom  navbar-light bg-light">
-  <router-link to="/">Home</router-link>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav dropup">
-      <li class="nav-item active">
-      <router-link to="/schedule">Matches</router-link>
-      </li>
-      <li class="nav-item">
-       <router-link to="/standings">Standings</router-link>
-      </li>
-      <li class="nav-item">
-       <router-link to="/chat">Chat</router-link>
-      </li>
-    </ul>
-  </div>
-</nav>
-    
-  </div>
+    <v-card  flat>
+      <!-- <div class="headline text-xs-center pa-5 ">
+      Active: {{ bottomNav }}
+    </div> -->
+      <v-bottom-nav :active.sync="bottomNav" :value="true" fixed shift color="black" class="bottomNav" height="70px">
+       <router-link to="/schedule">
+        <v-btn color="red darken-2" flat value="shcedule">
+          <span>Matches</span>
+          <v-icon large color="red">event</v-icon>
+        </v-btn>
+       </router-link>
+
+        <v-btn color="red darken-2" flat value="standings">
+          <span>Standings</span>
+          <v-icon large color="red" scr="">futbol</v-icon>
+        </v-btn>
+
+        <v-btn color="red darken-2" flat value="nearby">
+          <span>Stadium</span>
+          <v-icon  large color="red">place</v-icon>
+        </v-btn>
+      </v-bottom-nav>
+    </v-card>
+   </v-container>
+  </v-app>
 </template>
+
 <script>
-  // import BooksComponent from "@/components/BooksComponent.vue";
-  // import OneBookComponent from "@/components/OneBookComponent.vue";
+  import HomePage from '@/components/HomePage'
+
   export default {
-    name: "app",
+    name: 'App',
+    components: {
+      HomePage
+    },
+    data() {
+      return {
+        bottomNav: "schedule"
+      }
+    }
   }
-  //     return {
-  //       // books: [],
-  //       // searchBook: "",
-  //       // isLoading: true
-  //     };
-  //   },
-  // components: {
-  //   BooksComponent,
-  //   OneBookComponent
-  // }
-  //   computed: {
-  //     filterTheBooks() {
-  //       var searchOneBook = this.searchBook;
-  //       if (searchOneBook == "") {
-  //         return this.books;
-  //         // console.log("Hiu" + this.books);
-  //       }
-  //       // console.log(this.searchWords);
-  //       return this.books.filter(book =>
-  //         book.titulo.toLowerCase().includes(searchOneBook.toLowerCase())
-  //       );
-  //     }
-  //   },
-
-  //   created() {
-  //     this.getFetch();
-  //   },
-  //   methods: {
-  //     getFetch: function () {
-  //       fetch("https://api.myjson.com/bins/udbm5", {
-  //           method: "GET"
-  //         })
-  //         .then(response => {
-  //           return response.json();
-  //         })
-  //         .then(data => {
-  //           this.books = data.books;
-  //           console.log(this.books);
-  //           this.isLoading = false;
-  //         });
-  //     }
-  //   }
-  // };
 </script>
-
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    /* background-image: url("./assets/place.jpg");
-  background-repeat: no-repeat;
-      background-size:950px 3000px;
-    background-position: center;  */
+.homeItems{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    
+}
+.backgroundImage{
+  background-image: url("./assets/fbg.jpg"); /* The image used */
+  background-color: red; /* Used if the image is unavailable */
+  height: 100%; 
+  width:100%;
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* opacity: 0.7; */
 
-  }
-
-  /* #nav {
-    padding: 30px;
-    background-color: black;
-  }
-
-  #nav a {
-    font-weight: bold;
-    color: #2c3e50;
-  }
-
-  #nav a.router-link-exact-active {
-    color: #42b983;
-  } */
-
-  .footer {
-    margin-bottom: 4%;
-  }
+}
+.bottomNav{
+opacity: 0.7;
+}
 </style>
