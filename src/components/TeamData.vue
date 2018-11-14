@@ -89,7 +89,8 @@
 </script>
 <style>
 .panel{
-    margin-bottom:18%;
+    margin-bottom:91%;
+    
 }
     /* .col{
     margin-top:3%;

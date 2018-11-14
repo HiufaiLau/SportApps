@@ -1,9 +1,11 @@
 <template>
   <div class=" myHeader " align="left">
-       <router-link to="/">
-      <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
-   <span style="font-size:25px; margin-top:0%">Teams Info</span>
-   </router-link>
+        <router-link to="/">
+     <v-btn color="white darken-2" flat value="allTeams">
+          <v-icon large color="white darken-2">home</v-icon>
+          <span class="title">Teams</span>
+        </v-btn>
+    </router-link>
    <TeamData/>
   </div>
 </template>
@@ -19,7 +21,7 @@ import TeamData from '@/components/TeamData.vue'
 </script>
 <style>
 .myHeader{
-    margin-top: 25%;
+    margin-top: 24%;
 }
     /* .form-control {
         width: 260px;

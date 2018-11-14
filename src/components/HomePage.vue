@@ -40,7 +40,7 @@
 .homeHeader {
 /* padding-top: 70%; */
 /* padding-bottom: 10%;  */
-    margin-top: 20%;
+    margin-top: 19%;
     margin-bottom:10%;
      
 }
