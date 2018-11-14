@@ -1,5 +1,5 @@
 <template>
-   
+   <div class="teamsLogos">
         <div class="row">
             
         <div class="col">
@@ -99,7 +99,7 @@
         </div>
         
         </div> 
-   
+   </div> 
 </template>
 
 <script>
@@ -108,8 +108,8 @@
     }
 </script>
 <style>
-.row{
-    margin-bottom: 18%;
+.teamsLogos{
+    margin-bottom:18%;
 }
 .col{
     margin-top:3%;

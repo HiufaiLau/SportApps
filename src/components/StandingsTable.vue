@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th scope="col">Pos.</th>
-      <th scope="col">Teams</th>
+      <th scope="col">T</th>
       <th scope="col">Plad</th>
       <th scope="col">W</th>
       <th scope="col">D</th>
@@ -214,7 +214,7 @@ table td {
   text-align: center;
 }
 .scoreTable{
-  font-size: 15px;
+  font-size: 20px;
   table-layout: fixed;
   /* display: block;
     margin-left: auto;
@@ -224,7 +224,8 @@ table td {
   height:100%;
     margin-top:3%;
      margin-bottom: 20%;
-    background-color: rgba(190, 87, 87, 0.575);
+    background-color: darkred;
+    opacity: 0.8;
      /* border-style: groove;
     box-sizing: border-box;
     width: 300px;

@@ -1,8 +1,10 @@
 <template>
     <div class="myHeader" align="left">
         <router-link to="/">
-      <img class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
-   <span style="font-size:25px; margin-top:1%;"> Matches</span>
+     <v-btn color="white darken-2" flat value="allTeams">
+          <v-icon large color="white darken-2">home</v-icon>
+          <span class="title">Matches</span>
+        </v-btn>
     </router-link>
     </div>
 </template>
@@ -18,8 +20,15 @@ export default {
 }
 </script>
 <style>
+/* .title{
+    font-size:25px;
+     margin-top:1%;
+      color: rgb(167, 158, 158);
+    text-decoration: none;
+    font-size: 2rem;
+} */
 .myHeader{
-    margin-top:22%;
+    margin-top:25%;
 }
 .arrow{
     margin-bottom: 3%;

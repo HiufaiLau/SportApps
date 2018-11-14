@@ -31,7 +31,8 @@
           <span>Standings</span>
           <v-icon large color="red">fas fa-futbol</v-icon>
         </v-btn>
-      </router-link><router-link to="/allteams">
+      </router-link>
+      <router-link to="/allteams">
         <v-btn color="red darken-2" flat value="allTeams">
           <span>Teams</span>
           <v-icon large color="red">fas fa-users</v-icon>
@@ -79,6 +80,7 @@
     
 }
 .backgroundImage{
+  /* display: block; */
   background-image: url("./assets/Kick.jpg"); /* The image used */
   background-color: red; /* Used if the image is unavailable */
   width: 100%;

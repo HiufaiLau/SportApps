@@ -77,6 +77,11 @@
 /* .marginForTopNavbar{
   margin-top: 5%;
 } */
+h4{
+ color: rgb(202, 202, 202);
+    text-decoration: none;
+    font-size: 2rem;
+}
   .matchTable {
     border-style: groove;
     box-sizing: border-box;
