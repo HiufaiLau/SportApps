@@ -49,6 +49,11 @@
       text-decoration: none;
       /* opacity: 0.5; */
 }
+.title a:hover{
+  color: darkred;
+      text-decoration: none;
+      /* opacity: 0.5; */
+}
 img{
   border-radius: 10px;
 }
