@@ -1,7 +1,6 @@
 <template>
 <div class="teams">
 <TeamInfoHeader/>
-
 <TeamInfo/>
 </div>
 </template>

@@ -45,8 +45,9 @@
      
 }
 .title a{
-   color: rgba(255,255,255,0.5);
+   color: #bababa;
       text-decoration: none;
+      /* opacity: 0.5; */
 }
 img{
   border-radius: 10px;
