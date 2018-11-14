@@ -1,6 +1,7 @@
 <template>
+
 <div class="row">
-   <div class="col myHeader" align="left">
+   <div class="col" align="left">
        <router-link to="/">
       <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
    <span style="font-size:25px; margin-top:0%"> Standings</span>
@@ -16,6 +17,7 @@
     </ul>
   </div>
 </div>
+
 </template>
 <script> 
 export default {
@@ -27,13 +29,13 @@ export default {
 
 </script>
 <style>
-.col{
-    margin-top:20%;
+.myHeader{
+    margin-top:25%;
 }
 .arrow{
     margin-bottom:6%;
 }
 .dropdown{
-    margin-right:5%;
+    /* margin-right:5%; */
 }
 </style>

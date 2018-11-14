@@ -1,8 +1,8 @@
 <template>
-<table class="scoreTable table-sm table-hover justified" align="center" >
+<table class="scoreTable " align="center" >
   <thead>
     <tr>
-      <th scope="col">Position</th>
+      <th scope="col">Pos.</th>
       <th scope="col">Teams</th>
       <th scope="col">Plad</th>
       <th scope="col">W</th>
@@ -13,7 +13,7 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row" align="center">1</th>
       <td><img src="../assets/dortmund.png" alt="Dortmund" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -22,7 +22,7 @@
       <td>6</td>
     </tr>
    <tr>
-      <th scope="row">2</th>
+      <th scope="row" align="center">2</th>
       <img src="../assets/BM.png" alt="monchengladbach" height="40" width="20">
       <td>2</td>
       <td>2</td>
@@ -31,7 +31,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <th scope="row" align="center">3</th>
       <td> <img src="../assets/FCbayern.png" alt="FCByern" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -40,7 +40,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">4</th>
+      <th scope="row" align="center">4</th>
       <td> <img src="../assets/L.png" alt="Leipzig" height="40" width="60"></td>
       <td>2</td>
       <td>2</td>
@@ -49,7 +49,7 @@
       <td>6</td>
     </tr>
      <tr>
-      <th scope="row">5</th>
+      <th scope="row" align="center">5</th>
       <td><img src="../assets/dortmund.png" alt="Dortmund" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -58,7 +58,7 @@
       <td>6</td>
     </tr>
    <tr>
-      <th scope="row">6</th>
+      <th scope="row" align="center">6</th>
       <img src="../assets/BM.png" alt="monchengladbach" height="40" width="20">
       <td>2</td>
       <td>2</td>
@@ -67,7 +67,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">7</th>
+     <th scope="row" align="center">7</th>
       <td> <img src="../assets/FCbayern.png" alt="FCByern" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -76,7 +76,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">8</th>
+      <th scope="row" align="center">8</th>
       <td> <img src="../assets/L.png" alt="Leipzig" height="40" width="60"></td>
       <td>2</td>
       <td>2</td>
@@ -85,7 +85,7 @@
       <td>6</td>
     </tr>
      <tr>
-      <th scope="row">9</th>
+     <th scope="row" align="center">9</th>
       <td><img src="../assets/dortmund.png" alt="Dortmund" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -94,7 +94,7 @@
       <td>6</td>
     </tr>
    <tr>
-      <th scope="row">10</th>
+      <th scope="row" align="center">10</th>
       <img src="../assets/BM.png" alt="monchengladbach" height="40" width="20">
       <td>2</td>
       <td>2</td>
@@ -103,7 +103,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">11</th>
+     <th scope="row" align="center">11</th>
       <td> <img src="../assets/FCbayern.png" alt="FCByern" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -112,7 +112,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">12</th>
+    <th scope="row" align="center">12</th>
       <td> <img src="../assets/L.png" alt="Leipzig" height="40" width="60"></td>
       <td>2</td>
       <td>2</td>
@@ -121,7 +121,7 @@
       <td>6</td>
     </tr>
      <tr>
-      <th scope="row">13</th>
+      <th scope="row" align="center">13</th>
       <td><img src="../assets/dortmund.png" alt="Dortmund" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -130,7 +130,7 @@
       <td>6</td>
     </tr>
    <tr>
-      <th scope="row">14</th>
+      <th scope="row" align="center">14</th>
       <img src="../assets/BM.png" alt="monchengladbach" height="40" width="20">
       <td>2</td>
       <td>2</td>
@@ -139,7 +139,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">15</th>
+      <th scope="row" align="center">15</th>
       <td> <img src="../assets/FCbayern.png" alt="FCByern" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -148,7 +148,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">16</th>
+      <th scope="row" align="center">16</th>
       <td> <img src="../assets/L.png" alt="Leipzig" height="40" width="60"></td>
       <td>2</td>
       <td>2</td>
@@ -157,7 +157,7 @@
       <td>6</td>
     </tr>
     <tr>
-     <th scope="row">17</th>
+   <th scope="row" align="center">17</th>
       <td> <img src="../assets/FCbayern.png" alt="FCByern" height="40" width="40"></td>
       <td>2</td>
       <td>2</td>
@@ -166,7 +166,7 @@
       <td>6</td>
     </tr>
     <tr>
-      <th scope="row">18</th>
+      <th scope="row" align="center">18</th>
       <td> <img src="../assets/L.png" alt="Leipzig" height="40" width="60"></td>
       <td>2</td>
       <td>2</td>
@@ -190,12 +190,37 @@ export default {
 .btn{
     margin-top: 3%;
 }
-.scoreTable{
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+} */
+
+/* table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+} */
+ img{
+  margin-top:3%;
+}
+table th,
+table td {
+  /* padding: .625em; */
+  margin-top: 3%;
   text-align: center;
-  width:75%;
+}
+.scoreTable{
+  font-size: 15px;
+  table-layout: fixed;
+  /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+  text-align: center;
+  width:100%;
   height:100%;
     margin-top:3%;
      margin-bottom: 20%;

@@ -4,6 +4,7 @@
       <img  class="arrow" src="../assets/arrow.png" alt="back" height="30" width="30">
    <span style="font-size:25px; margin-top:0%">Teams Info</span>
    </router-link>
+
   <form class="form-inline" align="center">
             <input class="form-control mr-sm-2" align="center" type="search" placeholder="Search the team" aria-label="Search">
 
@@ -13,7 +14,7 @@
 
 <script>
     export default {
-        name: "TeamInfoHeader"
+        name: "teaminfoheader"
     }
 </script>
 <style>

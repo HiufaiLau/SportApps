@@ -8,7 +8,7 @@
       <div slot="header">Home Stadium</div>
       <v-card>
         <v-card-text><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.1240635562367!2d7.462931414955928!3d51.49259077963268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9177d916a7495%3A0x52801b14ebaf1dba!2sDortmund+Stadion!5e0!3m2!1sen!2sde!4v1542132542876"
-                    width="310" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </v-card-text>
       </v-card>
     </v-expansion-panel-content>

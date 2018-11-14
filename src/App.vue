@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <div class="color">
    <v-container class="backgroundImage">
     <v-container align="center" >
       <div class="logo row fixed-top navbar-expand-lg navbar-light" >
@@ -8,6 +9,7 @@
         </div>
       </div>
     </v-container>
+    
 
       <v-content  >
         <router-view>  </router-view>
@@ -48,6 +50,7 @@
       </v-bottom-nav>
     </v-card>
    </v-container>
+   </div>
   </v-app>
 </template>
 
@@ -67,6 +70,9 @@
   }
 </script>
 <style>
+.color{
+  background-color: black;
+}
 .homeItems{
     margin-top: 10%;
     margin-bottom: 5%;
@@ -75,13 +81,13 @@
 .backgroundImage{
   background-image: url("./assets/Kick.jpg"); /* The image used */
   background-color: red; /* Used if the image is unavailable */
-  height: 100%; 
-  width:100%;
+  width: 100%;
+    height: auto;
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    max-width: 100%;
+    /* max-width: 100%; */
     /* opacity: 0.7; */
 
 }
