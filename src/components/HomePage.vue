@@ -45,7 +45,7 @@
      
 }
 .title a{
-   color: #bababa;
+  color: rgba(255,255,255,0.5);
       text-decoration: none;
       /* opacity: 0.5; */
 }

@@ -40,7 +40,7 @@ width: 80%;
 .login{
   width: 100%;
     height: auto;
-    margin-top: 68%;
+    margin-top: 30%;
     margin-bottom: 76%;
     table-layout: fixed;
     color: rgba(255,255,255,0.5);
