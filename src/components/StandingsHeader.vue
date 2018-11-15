@@ -41,7 +41,21 @@ export default {
 .arrow{
     margin-bottom:6%;
 }
-.dropdown{
-    /* margin-right:5%; */
+.dropdown-menu {
+    background-color: rgba(0,0,0,0.54);
 }
+
+a{
+    color: rgb(182, 5, 5);
+}
+a:hover {
+    color:rgb(206, 195, 195);
+    text-decoration: none;
+}
+a:active, a:hover {
+    outline-width: 0;
+}
+/* .dropdown{ */
+    /* margin-right:5%; */
+/* } */
 </style>
