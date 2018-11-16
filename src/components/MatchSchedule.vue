@@ -1,7 +1,7 @@
 <template>
 
   <div class="container" align="center">
-    <div v-for="(oneMatch, index) in passingAllMatches"  :key="index">
+    <!-- <div v-for="(oneMatch, index) in passingAllMatches" passingOneMatch:singleMatch :key="index"> -->
     <h4 class="marginForTopNavbar" align="center">Group A</h4><span></span>
     <div class="panel panel-default" align="center">
       <div class="panel-body matchTable">
@@ -16,7 +16,7 @@
         <h6 class="score"><a href="">Highlight video</a> </h6>
       </div>
     </div>
-    </div>
+    <!-- </div> -->
 
     <h4>Group B</h4>
     <div class="panel panel-default">
@@ -96,14 +96,24 @@
     name: 'matchschedule',
     data() {
       return {
-        dialog: false
+        dialog: false,
       }
-    },
-      computed: {
-    passingAllMatches() {
-      return this.$route.params.dataToPass
     }
-  }
+  //   data () {
+  //   return {
+  //     passingAllMatches: null
+  //   }
+  // },
+  // created () {
+  //   this.passingAllMatches = this.$route.params.dataToPass
+  //   console.log(this.passingAllMatches)
+  // }
+  //     computed: {
+  //   passingAllMatches() {
+  //     return this.$route.params.dataToPass
+  //     console.log()
+  //   }
+  // }
   }
 </script>
 <style>
