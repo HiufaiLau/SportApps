@@ -1,6 +1,7 @@
 <template>
 
   <div class="container" align="center">
+    <div v-for="(oneMatch, index) in passingAllMatches"  :key="index">
     <h4 class="marginForTopNavbar" align="center">Group A</h4><span></span>
     <div class="panel panel-default" align="center">
       <div class="panel-body matchTable">
@@ -14,6 +15,7 @@
         <img src="../assets/Hertha_BSC_Logo.svg.png" alt="Hertha Berlin" height="80" width="80" style="margin-left:8%">
         <h6 class="score"><a href="">Highlight video</a> </h6>
       </div>
+    </div>
     </div>
 
     <h4>Group B</h4>
@@ -96,7 +98,12 @@
       return {
         dialog: false
       }
+    },
+      computed: {
+    passingAllMatches() {
+      return this.$route.params.dataToPass
     }
+  }
   }
 </script>
 <style>
