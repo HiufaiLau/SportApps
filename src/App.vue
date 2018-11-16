@@ -14,7 +14,10 @@
       <v-content  >
         <router-view>  </router-view>
       </v-content>
-  
+    <!-- <div v-if="isLoading">
+          <img src="./assets/loading.gif" height="200" width="200" style="background-color:darkred;">
+        </div>
+        <div v-else> -->
     <v-card flat>
       <!-- <div class="headline text-xs-center pa-5 ">
       Active: {{ bottomNav }}
@@ -50,11 +53,10 @@
         </v-btn> -->
       </v-bottom-nav>
     </v-card>
+    <!-- </div> -->
    </v-container>
    </div>
-   <!-- <div v-if="isLoading">
-       <img src="./assets/bundesliga.png" height="100" width="100" style="background-color:darkred;">
-      </div> -->
+   
   </v-app>
 </template>
 
@@ -67,7 +69,8 @@
     },
     data() {
       return {
-        bottomNav: "schedule"
+        bottomNav: "schedule",
+        // isLoading: true,
       }
     }
   }
