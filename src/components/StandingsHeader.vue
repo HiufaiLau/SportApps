@@ -10,13 +10,14 @@
     </router-link>
     </div>
     <div class="col dropdown" align="right">
-    <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown">Teams
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu ">
-      <li align="center"><a href="#">Dortmund</a></li>
-      <li align="center"><a href="#">Bayern</a></li>
-      <li align="center"><a href="#">Hertha Berlin</a></li>
-    </ul>
+    <form id="filter" action="">
+
+				<select id="selectTheState" v-model="states">
+					<option value="all">Choose the state</option>
+					<option v-for="(state, index) in getState" :key="index">{{state}}</option>
+				</select>
+
+			</form>
   </div>
 </div>
 </div>
