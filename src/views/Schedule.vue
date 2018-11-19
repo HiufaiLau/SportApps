@@ -1,37 +1,43 @@
 <template>
   <div class="schedule">
-     <div v-if="isLoading">
-          <!-- <img src="./assets/loading.gif" height="200" width="200" style="background-color:darkred;"> -->
-          <p>Loading...</p>
-        </div>
-        <div v-else>
-      <MatchScheduleHeader/>
-     <MatchScheduleDate/>
-    <MatchSchedule :allMatches='footballData' />
+    <div v-if="isLoading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+      <MatchScheduleHeader />
+      <MatchScheduleDate />
+      <MatchSchedule :allMatches='matchesToShow' />
     </div>
   </div>
 </template>
-<script> // @ is an alias to /src
+<script>
+  // @ is an alias to /src
 
 
-import MatchSchedule from '@/components/MatchSchedule.vue'
-import MatchScheduleDate from '@/components/MatchScheduleDate.vue'
-import MatchScheduleHeader from '@/components/MatchScheduleHeader.vue'
-export default {
+  import MatchSchedule from '@/components/MatchSchedule.vue'
+  import MatchScheduleDate from '@/components/MatchScheduleDate.vue'
+  import MatchScheduleHeader from '@/components/MatchScheduleHeader.vue'
+  export default {
 
-  name: 'schedule',
-  components: {
-MatchSchedule, 
-MatchScheduleDate,
-MatchScheduleHeader
-  },
-  props: ["passingAllMatches"],
-     data() {
+    name: 'schedule',
+    components: {
+      MatchSchedule,
+      MatchScheduleDate,
+      MatchScheduleHeader
+    },
+    props: ["passingAllMatches"],
+    data() {
       return {
         footballData: [],
         isLoading: true,
-        bottomNav: "schedule"
+        bottomNav: "schedule",
+        // finishedMatches: [],
+        // currentMatches: [],
+        matchesToShow: []
       }
+    },
+    computed: {
+
     },
     created() {
       this.getFetch();
@@ -50,12 +56,30 @@ MatchScheduleHeader
           .then(data => {
             this.footballData = data.matches;
             console.log(this.footballData);
+            this.matchesToShow = this.footballData;
             this.isLoading = false;
           });
+      },
+      findFinishedMatches() {
+        console.log('in findFinished')
+        this.matchesToShow = this.footballData.filter(oneMatchDay => {
+          return oneMatchDay.status == "FINISHED"
+        });
+        console.log(this.matchesToShow)
+      },
+      findCurrentMatches() {
+        this.matchesToShow = this.footballData.filter(oneMatchDay => {
+          return oneMatchDay.season.currentMatchday
+        });
+      },
+      findUpcomingMatches() {
+        this.matchesToShow = this.footballData.filter(oneMatchDay => {
+          return oneMatchDay.status == "SCHEDULED"
+        });
+
       }
     }
-}
-
+  }
 </script>
 <style>
 

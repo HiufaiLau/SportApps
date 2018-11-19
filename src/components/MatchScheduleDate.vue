@@ -1,8 +1,8 @@
 <template>
   <div class=" dates btn-group btn-group-justified">
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Finished</button>
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Current</button>
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Coming</button>
+  <button v-on:click="finished()" type="button" class="btn btn-dark">Finished</button>
+  <button v-on:click="current()" type="button" class="btn btn-dark">Current</button>
+  <button v-on:click="upcoming()" type="button" class="btn btn-dark">Coming</button>
 </div>
 </template>
 <script> 
@@ -10,8 +10,19 @@
 
 export default {
   name: 'matchscheuledate',
-  components: {
+  // components: {
     
+  // },
+  methods:{
+    finished(){
+      this.$parent.findFinishedMatches();
+    },
+    current(){
+       this.$parent.findCurrentMatches() ;
+    },
+    upcoming(){
+       this.$parent.findUpcomingMatches() ;
+    }
   }
 }
 
