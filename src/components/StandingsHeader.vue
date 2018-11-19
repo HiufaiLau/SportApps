@@ -36,7 +36,7 @@ export default {
      margin-top:25%;
 } */
 .col{
-    margin-top:25%;
+    margin-top:28%;
 }
 .arrow{
     margin-bottom:6%;
