@@ -1,8 +1,14 @@
 <template>
   <div class="schedule">
+     <div v-if="isLoading">
+          <!-- <img src="./assets/loading.gif" height="200" width="200" style="background-color:darkred;"> -->
+          <p>Loading...</p>
+        </div>
+        <div v-else>
       <MatchScheduleHeader/>
      <MatchScheduleDate/>
-    <MatchSchedule />
+    <MatchSchedule :allMatches='footballData' />
+    </div>
   </div>
 </template>
 <script> // @ is an alias to /src
@@ -19,7 +25,7 @@ MatchSchedule,
 MatchScheduleDate,
 MatchScheduleHeader
   },
-  
+  props: ["passingAllMatches"],
      data() {
       return {
         footballData: [],
@@ -42,7 +48,7 @@ MatchScheduleHeader
             return response.json();
           })
           .then(data => {
-            this.footballData = data;
+            this.footballData = data.matches;
             console.log(this.footballData);
             this.isLoading = false;
           });

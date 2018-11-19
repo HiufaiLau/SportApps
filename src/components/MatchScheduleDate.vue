@@ -1,8 +1,8 @@
 <template>
   <div class=" dates btn-group btn-group-justified">
-  <button type="button" class="btn btn-dark">Last Matches</button>
-  <button type="button" class="btn btn-dark">Today</button>
-  <button type="button" class="btn btn-dark">Next Matches</button>
+  <button type="button" class="btn btn-dark">Finished</button>
+  <button type="button" class="btn btn-dark">Current</button>
+  <button type="button" class="btn btn-dark">Coming</button>
 </div>
 </template>
 <script> 
