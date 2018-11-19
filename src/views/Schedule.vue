@@ -69,14 +69,21 @@
       },
       findCurrentMatches() {
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
-          return oneMatchDay.season.currentMatchday
+          return oneMatchDay.matchday== oneMatchDay.season.currentMatchday
         });
+        console.log(this.matchesToShow)
       },
       findUpcomingMatches() {
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
-          return oneMatchDay.status == "SCHEDULED"
+          return oneMatchDay.status == "SCHEDULED" 
         });
-
+        console.log(this.matchesToShow)
+      },
+       showAllMatches() {
+        this.matchesToShow = this.footballData.filter(oneMatchDay => {
+          return oneMatchDay.status == "SCHEDULED" || oneMatchDay.status == "FINISHED"
+        });
+        console.log(this.matchesToShow)
       }
     }
   }

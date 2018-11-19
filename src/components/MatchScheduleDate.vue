@@ -3,6 +3,7 @@
   <button v-on:click="finished()" type="button" class="btn btn-dark">Finished</button>
   <button v-on:click="current()" type="button" class="btn btn-dark">Current</button>
   <button v-on:click="upcoming()" type="button" class="btn btn-dark">Coming</button>
+  <button v-on:click="all()" type="button" class="btn btn-dark">All</button>
 </div>
 </template>
 <script> 
@@ -22,6 +23,9 @@ export default {
     },
     upcoming(){
        this.$parent.findUpcomingMatches() ;
+    },
+     all(){
+       this.$parent.showAllMatches();
     }
   }
 }
