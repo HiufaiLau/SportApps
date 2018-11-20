@@ -1,5 +1,6 @@
 <template>
 <div class="matchTable">  
+   
 <OneStanding  v-for="(match, index) in allStandings" :OneMatchStanding='match' :key="index" />
 </div>
 </template>
@@ -16,7 +17,7 @@ export default {
 </script>
 <style>
 .matchTable{
-  margin-bottom:20%;
+  margin-bottom:90%;
 }
 .btn{
     margin-top: 3%;

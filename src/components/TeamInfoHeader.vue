@@ -7,9 +7,7 @@
         </v-btn>
     </router-link>
 
-  <form class="form-inline" align="center">
-            <input class="form-control" align="center" type="search" placeholder="Search the team" aria-label="Search">
-        </form>
+  
   </div>
 </template>
 
@@ -22,19 +20,5 @@
 .myHeader{
     margin-top: 25%;
 }
-    .form-control {
-        width: 6;
-        margin-top: 2%;
-         /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    }
-
-    form {
-        margin-left: 10%;
-    }
-
-    input {
-        margin-right: 5%;
-    }
+   
 </style>

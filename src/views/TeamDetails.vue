@@ -1,32 +1,31 @@
 <template>
-  <div class=" myHeader " align="left">
-        <router-link to="/">
-     <v-btn color="white darken-2" flat value="allTeams">
-          <v-icon large color="white darken-2">home</v-icon>
-          <span class="title">Teams</span>
-        </v-btn>
-    </router-link>
-   <TeamData/>
-  </div>
+    <div class=" myHeader " align="left">
+        <TeamInfoHeader />
+        <TeamData />
+    </div>
+
 </template>
 
 <script>
-import TeamData from '@/components/TeamData.vue'
+    import TeamInfoHeader from '@/components/TeamInfoHeader.vue'
+    import TeamData from '@/components/TeamData.vue'
     export default {
         name: "teamdetails",
         components: {
-   TeamData
-  }
+            TeamData,
+            TeamInfoHeader
+        },
     }
 </script>
 <style>
-.myHeader{
-    margin-top: 24%;
-}
+    .myHeader {
+        margin-top: 24%;
+    }
+
     /* .form-control {
         width: 260px;
         margin-top: 2%; */
-         /* display: block;
+    /* display: block;
     margin-left: auto;
     margin-right: auto; */
     /* }

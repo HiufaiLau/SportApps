@@ -104,6 +104,7 @@
   background-size: cover; /* Resize the background image to cover the entire container */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin-right: 50%;
     /* max-width: 100%; */
     /* opacity: 0.7; */
 }

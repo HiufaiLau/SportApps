@@ -1,20 +1,57 @@
 <template>
-<div class="teams">
-<TeamInfoHeader/>
-<TeamInfo/>
-</div>
+  <div class="teams">
+    <div v-if="isLoading">
+      <p>Loading</p>
+    </div>
+    <div v-else>
+    <TeamInfoHeader />
+    <TeamInfo :allTeamsData='teamsData'/>
+    </div>
+  </div>
+
 </template>
 
-<script> // @ is an alias to /src
-import TeamInfoHeader from '@/components/TeamInfoHeader.vue'
-import TeamInfo from '@/components/TeamInfo.vue'
+<script>
+  // @ is an alias to /src
+  import TeamInfoHeader from '@/components/TeamInfoHeader.vue'
+  import TeamInfo from '@/components/TeamInfo.vue'
 
-export default {
 
-  name: 'allteams',
-  components: {
-    TeamInfoHeader,TeamInfo
+  export default {
+
+    name: 'allteams',
+    components: {
+      TeamInfoHeader,
+      TeamInfo,
+    },
+     props: ['passingAllteams'],
+     data() {
+      return {
+        teamsData: [],
+        isLoading: true,
+      }
+    },
+    created() {
+      this.getFetch();
+    },
+    methods: {
+      getFetch: function () {
+        fetch("http://api.jsonbin.io/b/5bf42eef746e9b593ec04ab0", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json"
+            }
+          })
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            this.teamsData = data.teams;
+            console.log(this.teamsData);
+            this.isLoading = false;
+          });
+      }
+    }
+
   }
-}
-
 </script>

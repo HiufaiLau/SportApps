@@ -9,16 +9,18 @@
         </v-btn>
     </router-link>
     </div>
-    <div class="col dropdown" align="right">
-    <form id="filter" action="">
-
-				<select id="selectTheState" v-model="states">
-					<option value="all">Choose the state</option>
-					<option v-for="(state, index) in getState" :key="index">{{state}}</option>
-				</select>
-
-			</form>
-  </div>
+    <!-- <form class="form-inline" align="center">
+            <input class="form-control" align="center" type="search" placeholder="Search the team" aria-label="Search">
+        </form> -->
+    <!-- <div class="col dropdown" align="right">
+    <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown">Teams
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu ">
+      <li align="center"><a href="#">Dortmund</a></li>
+      <li align="center"><a href="#">Bayern</a></li>
+      <li align="center"><a href="#">Hertha Berlin</a></li>
+    </ul>
+  </div> -->
 </div>
 </div>
 
@@ -56,6 +58,21 @@ a:hover {
 a:active, a:hover {
     outline-width: 0;
 }
+ .form-control {
+        width: 150;
+        margin-top: 2%;
+         /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    }
+
+    form {
+        margin-left: 10%;
+    }
+
+    input {
+        margin-right: 5%;
+    }
 /* .dropdown{ */
     /* margin-right:5%; */
 /* } */

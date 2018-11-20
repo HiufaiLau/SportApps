@@ -5,7 +5,10 @@
         </div>
         <div v-else>
       <StandingsHeader/>
-     <StandingsTable :allStandings='standingData'/>
+      <form class="form-inline" align="center">
+            <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team" aria-label="Search">
+        </form>
+     <StandingsTable :allStandings='filterTheTeams'/>
         </div>
   </div>
 </template>
@@ -27,9 +30,24 @@ StandingsTable,
      data() {
       return {
         standingData: [],
+        searchTeam: "",
         isLoading: true,
       }
     },
+    computed: {
+    filterTheTeams() {
+      var searchOneTeam = this.searchTeam;
+      if (searchOneTeam == "") {
+        return this.standingData;
+        console.log(searchOneTeams);
+      }
+      // console.log(this.searchWords);
+      return this.standingData.filter(oneteam =>
+        oneteam.team.name.toLowerCase().includes(searchOneTeam.toLowerCase())
+      );
+    }
+  },
+
 
 created() {
       this.getFetch();
@@ -61,7 +79,20 @@ created() {
     /* width: 350px;
     height: 800px; */
         /* margin-left: 3%; */
-       
-
 }
+.form-control {
+        width: 100%;
+        margin-top: 2%;
+         /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    }
+
+    form {
+        margin-left: 10%;
+    }
+
+    input {
+        margin-right: 5%;
+    }
 </style>

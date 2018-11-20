@@ -3,8 +3,8 @@
         <h4 class="marginForTopNavbar" align="center">Matchday {{oneMatch.matchday}}</h4><span></span>
     <div class="panel panel-default" align="center">
       <div class="panel-body matchTable">
-        <img class="score" src="../assets/FCbayern.png" alt="FCByern" height="40" width="40" style="margin-right:23%" align="center">
-         <img src="../assets/dortmund.png" alt="Dortmund" height="40" width="40" style="margin-left:8%" align="center"> 
+        <img class="score" src="../assets/FCbayern.png" alt="FCByern" height="60" width="60" style="margin-right:23%" align="center">
+         <img src="../assets/dortmund.png" alt="Dortmund" height="60" width="60" style="margin-left:8%" align="center"> 
          <br>
          <br>
          <span style="margin-right:5%;" align="center">{{oneMatch.awayTeam.name}}</span>
@@ -27,7 +27,15 @@
 <script>
 export default {
     name: 'oneMatchSchedule',
-    props: ['oneMatch']
+    props: ['oneMatch'],
+    methods: {
+        test: function(){
+            console.log(this.oneMatch)
+        }
+    },
+    created() {
+        this.test()
+    }
 }
 </script>
 

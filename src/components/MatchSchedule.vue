@@ -2,11 +2,6 @@
 
   <div class="container" align="center">
     <OneMatchSchedule v-for="(match, index) in allMatches" :oneMatch='match' :key="index" />
-     <!-- <div class=" dates btn-group btn-group-justified">
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Finished</button>
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Current</button>
-  <button v-on:click="filterMatches" type="button" class="btn btn-dark">Coming</button>
-     </div> -->
 </div>
   
     

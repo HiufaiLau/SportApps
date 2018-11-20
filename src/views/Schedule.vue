@@ -55,7 +55,7 @@
           })
           .then(data => {
             this.footballData = data.matches;
-            console.log(this.footballData);
+            // console.log(this.footballData);
             this.matchesToShow = this.footballData;
             this.isLoading = false;
           });
@@ -65,25 +65,25 @@
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
           return oneMatchDay.status == "FINISHED"
         });
-        console.log(this.matchesToShow)
+        // console.log(this.matchesToShow)
       },
       findCurrentMatches() {
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
           return oneMatchDay.matchday== oneMatchDay.season.currentMatchday
         });
-        console.log(this.matchesToShow)
+        // console.log(this.matchesToShow)
       },
       findUpcomingMatches() {
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
           return oneMatchDay.status == "SCHEDULED" 
         });
-        console.log(this.matchesToShow)
+        // console.log(this.matchesToShow)
       },
        showAllMatches() {
         this.matchesToShow = this.footballData.filter(oneMatchDay => {
           return oneMatchDay.status == "SCHEDULED" || oneMatchDay.status == "FINISHED"
         });
-        console.log(this.matchesToShow)
+        // console.log(this.matchesToShow)
       }
     }
   }
