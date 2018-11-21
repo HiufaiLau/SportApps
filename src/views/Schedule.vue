@@ -4,16 +4,14 @@
       <p>Loading...</p>
     </div>
     <div v-else> -->
-      <MatchScheduleHeader />
-      <MatchScheduleDate />
-      <MatchSchedule :allMatches='matchesToShow' :allLogos="getLogo" />
+    <MatchScheduleHeader />
+    <MatchScheduleDate />
+    <MatchSchedule :allMatches='matchesToShow' :allLogos="getLogo" />
     <!-- </div> -->
   </div>
 </template>
 <script>
   // @ is an alias to /src
-
-
   import MatchSchedule from '@/components/MatchSchedule.vue'
   import MatchScheduleDate from '@/components/MatchScheduleDate.vue'
   import MatchScheduleHeader from '@/components/MatchScheduleHeader.vue'
@@ -38,9 +36,8 @@
     },
     computed: {
       getLogo() {
-        console.log(this.$route.params.dataToPass)
         return this.$route.params.dataToPass
-      }    
+      }
     },
     created() {
       this.getFetch();
@@ -58,7 +55,6 @@
           })
           .then(data => {
             this.footballData = data.matches;
-            // console.log(this.footballData);
             this.matchesToShow = this.footballData;
             this.isLoading = false;
           });

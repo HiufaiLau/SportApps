@@ -34,31 +34,4 @@ opacity: 0.9;
 background-color: black;
   }
 
-  /* .col{
-    margin-top:3%;
-    margin-bottom: 18%;
-    text-align: center;
-}
-    .arrow {
-        margin-bottom: 3%;
-    }
-
-    .form-control {
-        width: 300px;
-    }
-
-    form {
-        margin-left: 10%;
-    }
-
-    input {
-        margin-right: 5%;
-    }
-    .score{
-        margin-right: 3%;
-        margin-left: 3%;
-    } */
-  /* .col{
-            margin-bottom: 1%;
-    } */
 </style>

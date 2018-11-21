@@ -1,63 +1,34 @@
 <template>
   <dir>
-    <div class="container" align="center" 
-      v-for="(match, index) in allMatches" :key="index">
-      <OneMatchSchedule :oneMatch='match' :twoLogos='getBothLogos(match)'/>  
+    <div class="container" align="center" v-for="(match, index) in allMatches" :key="index">
+      <OneMatchSchedule :oneMatch='match' :twoLogos='getBothLogos(match)' />
       <!-- <OneMatchSchedule :oneMatch='match' :homeLogo='getBothLogos(match)' :awayLogo='getBothLogos(match)'/>  
       in this case, i have two props to passing the data, so i need two function() to filter the data-->
     </div>
   </dir>
-    
-  
-    
-    
- <!-- <div>
-          <v-dialog v-model="dialog" width="500">
-            <v-btn slot="activator" color="red lighten-2" dark>
-              Click Me
-            </v-btn>
-
-            <v-card>
-              <v-card-title class="headline grey lighten-2" primary-title>
-                Match Highlight
-              </v-card-title>
-
-              <v-card-text>
-                
-              </v-card-text>
-
-              <v-divider></v-divider>
-
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="primary" flat @click="dialog = false">
-                  Close
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </div> -->
 </template>
 <script>
-import OneMatchSchedule from '@/components/OneMatchSchedule.vue'
+  import OneMatchSchedule from '@/components/OneMatchSchedule.vue'
   export default {
     name: 'matchschedule',
-    props:['allMatches','allLogos'],
+    props: ['allMatches', 'allLogos'],
     components: {
       OneMatchSchedule
     },
     data() {
       return {
-        dialog: false,
+        
       }
     },
-    methods:{
-      getBothLogos(match){
+    methods: {
+      getBothLogos(match) {
         const oneLogoAndNameHome = this.allLogos.filter(oneLogo => match.homeTeam.name == oneLogo.name)
         const oneLogoAndNameAway = this.allLogos.filter(oneLogo => match.awayTeam.name == oneLogo.name)
         // console.log(oneLogoAndName[0].logo)
-        return {home: oneLogoAndNameHome[0].logo,
-                away: oneLogoAndNameAway[0].logo}
+        return {
+          home: oneLogoAndNameHome[0].logo,
+          away: oneLogoAndNameAway[0].logo
+        }
       },
     }
   }
@@ -106,24 +77,26 @@ import OneMatchSchedule from '@/components/OneMatchSchedule.vue'
     color: darkred;
   }
 
-  .dates{
-   display: block;
+  .dates {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     /* width: 50%; */
-  /* margin-top:20%; */
+    /* margin-top:20%; */
     /* margin-bottom: 5%; */
     text-align: center;
-}
-.btn {
+  }
+
+  .btn {
     /* margin-top: 3%; */
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
-}
-.btn-dark {
-    color:rgb(219, 219, 219);
+  }
+
+  .btn-dark {
+    color: rgb(219, 219, 219);
     background-color: #4d4a4b;
     border-color: #4d4a4b;
-}
+  }
 </style>

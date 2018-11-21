@@ -3,15 +3,12 @@
     <TeamInfoHeader />
     <TeamInfo :allTeamsData='teamsData' />
   </div>
-
 </template>
 
 <script>
   // @ is an alias to /src
   import TeamInfoHeader from '@/components/TeamInfoHeader.vue'
   import TeamInfo from '@/components/TeamInfo.vue'
-
-
   export default {
 
     name: 'allteams',
@@ -20,13 +17,14 @@
       TeamInfo,
     },
     props: ['passingAllteams'],
-    
+
     data() {
       return {
         teamsData: [],
-        // isLoading: true,
-      }
-    },
+        infoToShow: []
+            }
+        },
+        
     created() {
       this.getFetch();
     },
@@ -46,7 +44,13 @@
             console.log(this.teamsData);
             this.isLoading = false;
           });
-      }
+      },
+       infoFilterByImage() {
+                this.infoToShow = this.teamsData.filter(oneTeamInfo => {
+                    return oneTeamInfo.name == this.teamsData.name
+                });
+                console.log(this.infoToShow)
+            }
     }
 
   }

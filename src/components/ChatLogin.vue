@@ -1,50 +1,26 @@
 <template>
   <div class="loginPage">
     <div v-if="isLogout">
-      <button v-on:click="login()" class="btn btn-dark"> Login </button> 
+      <button v-on:click="login()" class="btn btn-dark"> Login </button>
     </div>
     <div v-else>
-       <button v-on:click="logout()" class="btn btn-dark"> Logout </button>
-      <div v-for="(msg, index) in messages" :key="index">
-        <p>{{msg.name}}</p>
-        <p>{{msg.date}}</p>
-        <p>{{msg.body}}</p>
-      </div>
-      <hr>
-      <input type="text" v-model="msg">
-      <button v-on:click="writeNewPost()" class="btn btn-dark">Send</button>
-     </div>
+      <button v-on:click="logout()" class="btn btn-dark"> Logout </button>
+      <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
+
+        <div class="chat">
+          <div class="chatbox" v-for="(msg, index) in messages" :key="index">
+            <p class="name">{{msg.name}}</p>
+            <p class="body">{{msg.body}}</p>
+            <p class="date">{{msg.date}}</p>
+          </div>
+        </div>
+      </v-container>
+    </div>
+    <hr>
+    <input type="text" v-model="msg">
+    <button v-on:click="writeNewPost()" class="btn btn-dark">Send</button>
   </div>
-  </template>
-  <!-- <div class="login"> -->
-  <!-- <form class="dropdown-menu p-4"> -->
-  <!-- <div class="form-group">
-    <label for="exampleDropdownFormEmail2" align="center">Email address</label>
-    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com"  align="center">
-  </div>
-  <div class="form-group" >
-    <label for="exampleDropdownFormPassword2" align="center">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" align="center">
-  </div> -->
-
-  <!-- <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-    <label class="form-check-label" for="dropdownCheck2">
-      Remember me
-    </label>
-  </div> -->
-
-  <!-- <button type="submit" class="btn btn-dark">Sign in</button>
-  
-    <div class="dropdown-divider"></div>
-  <a class="signUp" href="#">New around here? Sign up</a> -->
-
-  <!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
-
-  <!-- </div> -->
-  <!-- </form> -->
-
-
+</template>
 
 <script>
   import firebase from "firebase/app";
@@ -58,7 +34,7 @@
         msg: "",
         user: null,
         messages: [],
-        isLogout:true
+        isLogout: true
       };
     },
     methods: {
@@ -82,7 +58,7 @@
           .catch(function (error) {
             alert("error" + error.message);
           });
-          this.isLogout=false
+        this.isLogout = false
       },
       logout() {
         firebase
@@ -94,7 +70,7 @@
           .catch(function (error) {
             alert("alert logout");
           });
-          this.isLogout=true
+        this.isLogout = true
       },
       writeNewPost() {
         console.log(this.user.displayName);
@@ -125,14 +101,34 @@
           .on("value", data => {
             this.messages = data.val();
           });
-          
+
       }
     }
   }
 </script>
 <style>
-  .loginPage {
+  /* .loginPage {
     display: block;
+  } */
+  .pannel {
+    border-style: groove;
+    box-sizing: border-box;
+    /* width: 100%; */
+    /* height: 1000px; */
+    overflow: scroll;
+    border: none;
+    padding-top: 20px;
+    margin-bottom: 8%;
+    border-radius: 10px;
+    background-color: rgb(102, 76, 76);
+    opacity: 0.3;
+  }
+
+  .chat {
+    /* width: 340px; */
+    height: 800;
+    overflow: scroll;
+    word-break: break-all;
   }
 
   button {
@@ -154,6 +150,28 @@
     width: 200px;
     height: 40px;
     border-radius: 6px;
+  }
+
+  .chatbox {
+    background-color: darkred;
+    opacity: 0.6;
+    width: 280px;
+    border-radius: 10px;
+  }
+
+  p.name {
+    color: #131111ed;
+    font-size: 20px;
+  }
+
+  p.date {
+    color: #ab8787f0;
+    font-size: 12px;
+  }
+
+  p.body {
+    color: #ffffff;
+    font-size: 18px;
   }
 
   /* label{

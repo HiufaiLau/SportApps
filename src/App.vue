@@ -1,47 +1,49 @@
 <template>
   <v-app>
-    <v-container class="backgroundImage">
-      <v-container align="center">
-        <div class="logo row fixed-top navbar-expand-lg navbar-light">
-          <div class="col mt-2 " align="center">
-            <img src="./assets/bundesliga.png" height="120" width="100">
+    <div class="color">
+      <v-container class="backgroundImage">
+        <v-container align="center">
+          <div class="logo row fixed-top navbar-expand-lg navbar-light">
+            <div class="col mt-2 " align="center">
+              <img src="./assets/bundesliga.png" height="120" width="100">
+            </div>
           </div>
-        </div>
+        </v-container>
+        <v-content>
+          <router-view> </router-view>
+        </v-content>
+        <v-card flat>
+          <v-bottom-nav :active.sync="bottomNav" :value="true" fixed shift class="bottom" height="70px">
+            <router-link :to="{ name: 'schedule', params: { dataToPass: this.onlyLogosAndNames} }" class="bottomNav">
+              <v-btn color="red darken-2" flat value="shcedule">
+                <span>Matches</span>
+                <v-icon large color="red">event</v-icon>
+              </v-btn>
+            </router-link>
+
+            <router-link to="/standings" class="bottomNav">
+              <v-btn color="red darken-2" flat value="standings">
+                <span>Standings</span>
+                <v-icon large color="red">fas fa-futbol</v-icon>
+              </v-btn>
+            </router-link>
+
+            <router-link to="/allteams" class="bottomNav">
+              <v-btn color="red darken-2" flat value="allTeams">
+                <span>Teams</span>
+                <v-icon large color="red">fas fa-users</v-icon>
+              </v-btn>
+            </router-link>
+            <router-link to="/chat" class="bottomNav">
+              <v-btn color="red darken-2" flat value="chat">
+                <span>Chat</span>
+                <v-icon large color="red">far fa-comments</v-icon>
+              </v-btn>
+            </router-link>
+          </v-bottom-nav>
+        </v-card>
       </v-container>
-      <v-content>
-        <router-view> </router-view>
-      </v-content>
-      <v-card flat>
-        <v-bottom-nav :active.sync="bottomNav" :value="true" fixed shift class="bottom" height="70px">
-          <router-link :to="{ name: 'schedule', params: { dataToPass: this.onlyLogosAndNames} }" class="bottomNav">
-            <v-btn color="red darken-2" flat value="shcedule">
-              <span>Matches</span>
-              <v-icon large color="red">event</v-icon>
-            </v-btn>
-          </router-link>
-
-          <router-link to="/standings" class="bottomNav">
-            <v-btn color="red darken-2" flat value="standings">
-              <span>Standings</span>
-              <v-icon large color="red">fas fa-futbol</v-icon>
-            </v-btn>
-          </router-link>
-
-          <router-link to="/allteams" class="bottomNav">
-            <v-btn color="red darken-2" flat value="allTeams">
-              <span>Teams</span>
-              <v-icon large color="red">fas fa-users</v-icon>
-            </v-btn>
-          </router-link>
-          <router-link to="/chat" class="bottomNav">
-            <v-btn color="red darken-2" flat value="chat">
-              <span>Chat</span>
-              <v-icon large color="red">far fa-comments</v-icon>
-            </v-btn>
-          </router-link>
-        </v-bottom-nav>
-      </v-card>
-    </v-container>
+    </div>
   </v-app>
 </template>
 
@@ -118,9 +120,11 @@
 
   .container.backgroundImage {
     padding-bottom: 800px;
+    background-color: black;
   }
 
   .backgroundImage {
+    background-color: black;
     /* display: block; */
     padding-bottom: 800px;
     background-image: url("./assets/Kick.jpg");

@@ -1,7 +1,7 @@
 <template>
   <div class="chat" align="center">
-      <ChatLoginHeader />
-      <ChatLogin />
+    <ChatLoginHeader />
+    <ChatLogin />
   </div>
 </template>
 
@@ -18,7 +18,7 @@
       ChatLogin,
       ChatLoginHeader
     },
-     data() {
+    data() {
       return {
         // isLoading: true,
       }

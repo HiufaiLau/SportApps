@@ -1,14 +1,12 @@
 <template>
-  <div class=" theHeader " align="left">
-       <router-link to="/">
-     <v-btn color="white darken-2" flat value="allTeams">
-          <v-icon large color="white darken-2">home</v-icon>
-          <span class="title">Teams</span>
-        </v-btn>
-    </router-link>
-
-  
-  </div>
+    <div class=" theHeader " align="left">
+        <router-link to="/">
+            <v-btn color="white darken-2" flat value="allTeams">
+                <v-icon large color="white darken-2">home</v-icon>
+                <span class="title">Teams</span>
+            </v-btn>
+        </router-link>
+    </div>
 </template>
 
 <script>
@@ -17,8 +15,7 @@
     }
 </script>
 <style>
-.theHeader{
-    margin-top: 30%;
-}
-   
+    .theHeader {
+        margin-top: 40%;
+    }
 </style>
