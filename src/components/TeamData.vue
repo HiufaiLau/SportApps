@@ -1,9 +1,9 @@
 <template>
   <div class="panel text-xs-center">
-    <v-expansion-panel>
-      <v-expansion-panel-content v-for="(team, index) in dataInTeam" :key="index">
-        <div slot="header">{{team.name}}</div>
-        <v-card>
+    <v-expansion-panel style="background-color:darkred;">
+      <v-expansion-panel-content v-for="(team, index) in dataInTeam" :key="index" style="background-color:darkred;">
+        <div slot="header" style="font-size:20px;">{{team.name}}</div>
+        <v-card style="background-color:#8e878785;">
           <v-card-text>
             <iframe :src="team.addressUrl" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
           </v-card-text>
