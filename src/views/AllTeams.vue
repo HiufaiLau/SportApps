@@ -1,11 +1,13 @@
 <template>
   <div class="teams">
+    <TeamInfoHeader />
     <div v-if="isLoading">
       <p>Loading</p>
     </div>
-    <div v-else>
-    <TeamInfoHeader />
-    <TeamInfo :allTeamsData='teamsData'/>
+    
+      
+      <div v-else>
+      <TeamInfo :allTeamsData='teamsData' />
     </div>
   </div>
 
@@ -24,8 +26,8 @@
       TeamInfoHeader,
       TeamInfo,
     },
-     props: ['passingAllteams'],
-     data() {
+    props: ['passingAllteams'],
+    data() {
       return {
         teamsData: [],
         isLoading: true,

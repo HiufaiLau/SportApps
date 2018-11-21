@@ -1,33 +1,35 @@
 <template>
   <div class="schedule">
-     <div v-if="isLoading">
-          <p>Loading...</p>
-        </div>
-        <div v-else>
-      <StandingsHeader/>
+    <div v-if="isLoading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+      <StandingsHeader />
       <form class="form-inline" align="center">
-            <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team" aria-label="Search">
-        </form>
-     <StandingsTable :allStandings='filterTheTeams'/>
-        </div>
+        <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team"
+          aria-label="Search">
+      </form>
+      <StandingsTable :allStandings='filterTheTeams' />
+    </div>
   </div>
 </template>
-<script> // @ is an alias to /src
+<script>
+  // @ is an alias to /src
 
 
-import StandingsHeader from '@/components/StandingsHeader.vue'
-import StandingsTable from '@/components/StandingsTable.vue'
+  import StandingsHeader from '@/components/StandingsHeader.vue'
+  import StandingsTable from '@/components/StandingsTable.vue'
 
 
-export default {
+  export default {
 
-  name: 'schedule',
-  components: {
-StandingsHeader,
-StandingsTable,
-  },
-   props: ['passingAllStandings'],
-     data() {
+    name: 'schedule',
+    components: {
+      StandingsHeader,
+      StandingsTable,
+    },
+    props: ['passingAllStandings'],
+    data() {
       return {
         standingData: [],
         searchTeam: "",
@@ -35,21 +37,21 @@ StandingsTable,
       }
     },
     computed: {
-    filterTheTeams() {
-      var searchOneTeam = this.searchTeam;
-      if (searchOneTeam == "") {
-        return this.standingData;
-        console.log(searchOneTeams);
+      filterTheTeams() {
+        var searchOneTeam = this.searchTeam;
+        if (searchOneTeam == "") {
+          return this.standingData;
+          console.log(searchOneTeams);
+        }
+        // console.log(this.searchWords);
+        return this.standingData.filter(oneteam =>
+          oneteam.team.name.toLowerCase().includes(searchOneTeam.toLowerCase())
+        );
       }
-      // console.log(this.searchWords);
-      return this.standingData.filter(oneteam =>
-        oneteam.team.name.toLowerCase().includes(searchOneTeam.toLowerCase())
-      );
-    }
-  },
+    },
 
 
-created() {
+    created() {
       this.getFetch();
     },
     methods: {
@@ -71,28 +73,29 @@ created() {
       }
     }
 
-}
+  }
 </script>
 
 <style>
-.schedule{
+  .schedule {
     /* width: 350px;
     height: 800px; */
-        /* margin-left: 3%; */
-}
-.form-control {
-        width: 100%;
-        margin-top: 2%;
-         /* display: block;
+    /* margin-left: 3%; */
+  }
+
+  .form-control {
+    width: 100%;
+    margin-top: 2%;
+    /* display: block;
     margin-left: auto;
     margin-right: auto; */
-    }
+  }
 
-    form {
-        margin-left: 10%;
-    }
+  form {
+    margin-left: 10%;
+  }
 
-    input {
-        margin-right: 5%;
-    }
+  input {
+    margin-right: 5%;
+  }
 </style>

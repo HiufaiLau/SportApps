@@ -1,7 +1,7 @@
 <template>
     <div class=" myHeader " align="left">
-        <TeamInfoHeader />
-        <TeamData />
+            <TeamInfoHeader />
+            <TeamData />
     </div>
 
 </template>
@@ -15,6 +15,11 @@
             TeamData,
             TeamInfoHeader
         },
+        // data() {
+        //     return {
+        //         isLoading: true,
+        //     }
+        // }
     }
 </script>
 <style>
