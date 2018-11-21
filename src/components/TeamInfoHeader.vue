@@ -1,5 +1,5 @@
 <template>
-  <div class=" myHeader " align="left">
+  <div class=" theHeader " align="left">
        <router-link to="/">
      <v-btn color="white darken-2" flat value="allTeams">
           <v-icon large color="white darken-2">home</v-icon>
@@ -17,8 +17,8 @@
     }
 </script>
 <style>
-.myHeader{
-    margin-top: 25%;
+.theHeader{
+    margin-top: 30%;
 }
    
 </style>

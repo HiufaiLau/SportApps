@@ -1,9 +1,9 @@
 <template>
   <div class="schedule">
-    <div v-if="isLoading">
+    <!-- <div v-if="isLoading">
       <p>Loading...</p>
     </div>
-    <div v-else>
+    <div v-else> -->
       <StandingsHeader />
       <form class="form-inline" align="center">
         <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team"
@@ -11,7 +11,7 @@
       </form>
       <StandingsTable :allStandings='filterTheTeams' />
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 <script>
   // @ is an alias to /src
@@ -33,7 +33,7 @@
       return {
         standingData: [],
         searchTeam: "",
-        isLoading: true,
+        // isLoading: true,
       }
     },
     computed: {

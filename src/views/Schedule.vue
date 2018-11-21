@@ -1,13 +1,13 @@
 <template>
   <div class="schedule">
-    <div v-if="isLoading">
+    <!-- <div v-if="isLoading">
       <p>Loading...</p>
     </div>
-    <div v-else>
+    <div v-else> -->
       <MatchScheduleHeader />
       <MatchScheduleDate />
-      <MatchSchedule :allMatches='matchesToShow' />
-    </div>
+      <MatchSchedule :allMatches='matchesToShow' :allLogos="getLogo" />
+    <!-- </div> -->
   </div>
 </template>
 <script>
@@ -29,7 +29,7 @@
     data() {
       return {
         footballData: [],
-        isLoading: true,
+        // isLoading: true,
         bottomNav: "schedule",
         // finishedMatches: [],
         // currentMatches: [],
@@ -37,7 +37,10 @@
       }
     },
     computed: {
-
+      getLogo() {
+        console.log(this.$route.params.dataToPass)
+        return this.$route.params.dataToPass
+      }    
     },
     created() {
       this.getFetch();

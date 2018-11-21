@@ -40,9 +40,8 @@
 .homeHeader {
 /* padding-top: 70%; */
 /* padding-bottom: 10%;  */
-    margin-top: 19%;
-    margin-bottom:10%;
-     
+    margin-top: 40%;
+    /* margin-bottom:10%; */
 }
 .title a{
   color: rgba(255,255,255,0.5);

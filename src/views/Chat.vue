@@ -1,9 +1,7 @@
 <template>
   <div class="chat" align="center">
-    
       <ChatLoginHeader />
       <ChatLogin />
-    
   </div>
 </template>
 

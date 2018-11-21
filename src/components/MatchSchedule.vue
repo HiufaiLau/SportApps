@@ -1,8 +1,13 @@
 <template>
-
-  <div class="container" align="center">
-    <OneMatchSchedule v-for="(match, index) in allMatches" :oneMatch='match' :key="index" />
-</div>
+  <dir>
+    <div class="container" align="center" 
+      v-for="(match, index) in allMatches" :key="index">
+      <OneMatchSchedule :oneMatch='match' :twoLogos='getBothLogos(match)'/>  
+      <!-- <OneMatchSchedule :oneMatch='match' :homeLogo='getBothLogos(match)' :awayLogo='getBothLogos(match)'/>  
+      in this case, i have two props to passing the data, so i need two function() to filter the data-->
+    </div>
+  </dir>
+    
   
     
     
@@ -37,7 +42,7 @@
 import OneMatchSchedule from '@/components/OneMatchSchedule.vue'
   export default {
     name: 'matchschedule',
-    props:['allMatches'],
+    props:['allMatches','allLogos'],
     components: {
       OneMatchSchedule
     },
@@ -45,8 +50,16 @@ import OneMatchSchedule from '@/components/OneMatchSchedule.vue'
       return {
         dialog: false,
       }
+    },
+    methods:{
+      getBothLogos(match){
+        const oneLogoAndNameHome = this.allLogos.filter(oneLogo => match.homeTeam.name == oneLogo.name)
+        const oneLogoAndNameAway = this.allLogos.filter(oneLogo => match.awayTeam.name == oneLogo.name)
+        // console.log(oneLogoAndName[0].logo)
+        return {home: oneLogoAndNameHome[0].logo,
+                away: oneLogoAndNameAway[0].logo}
+      },
     }
-  
   }
 </script>
 <style>

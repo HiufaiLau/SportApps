@@ -1,10 +1,8 @@
 <template>
   <div class="loginPage">
     <div v-if="isLogout">
-      <button v-on:click="login()" class="btn btn-dark"> Login </button>
-     
+      <button v-on:click="login()" class="btn btn-dark"> Login </button> 
     </div>
-    <!-- <hr> -->
     <div v-else>
        <button v-on:click="logout()" class="btn btn-dark"> Logout </button>
       <div v-for="(msg, index) in messages" :key="index">
@@ -127,6 +125,7 @@
           .on("value", data => {
             this.messages = data.val();
           });
+          
       }
     }
   }

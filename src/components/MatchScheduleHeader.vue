@@ -28,7 +28,7 @@ export default {
     font-size: 2rem;
 } */
 .myHeader{
-    margin-top:25%;
+    margin-top:30%;
 }
 .arrow{
     margin-bottom: 3%;

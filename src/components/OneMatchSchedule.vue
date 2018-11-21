@@ -3,8 +3,8 @@
         <h4 class="marginForTopNavbar" align="center">Matchday {{oneMatch.matchday}}</h4><span></span>
     <div class="panel panel-default" align="center">
       <div class="panel-body matchTable">
-        <img class="score" src="../assets/FCbayern.png" alt="FCByern" height="60" width="60" style="margin-right:23%" align="center">
-         <img src="../assets/dortmund.png" alt="Dortmund" height="60" width="60" style="margin-left:8%" align="center"> 
+        <img class="score" :src="twoLogos.home" alt="FCByern" height="60" width="60" style="margin-right:23%" align="center">
+         <img class="score" :src="twoLogos.away" alt="Dortmund" height="60" width="60" style="margin-left:8%" align="center"> 
          <br>
          <br>
          <span style="margin-right:5%;" align="center">{{oneMatch.awayTeam.name}}</span>
@@ -13,23 +13,18 @@
          <h1 class="score">{{oneMatch.score.fullTime.awayTeam}} : {{oneMatch.score.fullTime.homeTeam}}</h1>
         <h5 style="color:red;">{{oneMatch.utcDate}}</h5>
         <h6 class="score"><a href="">{{oneMatch.status}}</a> </h6>
-        <!-- <br>
-        <img class="score" src="../assets/FC_Schalke_04.png" alt="FC Schalke" height="80" width="80" style="margin-right:8%">
-        <span class="score"> 2 : 1 </span>
-        <img src="../assets/Hertha_BSC_Logo.svg.png" alt="Hertha Berlin" height="80" width="80" style="margin-left:8%">
-        <h6 class="score"><a href="">Highlight video</a> </h6> -->
       </div>
     </div>
-        <!-- <p>{{oneMatch.homeTeam.name}}</p> -->
     </div>
 </template>
 
 <script>
 export default {
     name: 'oneMatchSchedule',
-    props: ['oneMatch'],
+    props: ['oneMatch','twoLogos'],
     methods: {
         test: function(){
+            console.log(this.twoLogos)
             console.log(this.oneMatch)
         }
     },
