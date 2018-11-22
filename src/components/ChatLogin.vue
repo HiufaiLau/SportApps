@@ -6,9 +6,12 @@
     <div class="afterLogin" v-else>
       <button v-on:click="logout()" class="right btn btn-dark" align="left"> Logout </button>
       <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-        <div :class="{active: isActive}">
-          <div class="chat">
-            <div class="chatbox" v-for="(msg, index) in messages" :key="index">
+
+        <!-- <div :class=" messageInfo()"> -->
+        <!-- <div :class="classObject"> -->
+        <div class="chat">
+          <div class="chatbox static" v-for="(msg, index) in messages" :key="index">
+            <div :class="{active: messageInfo(msg.name)}">
               <p class="name">{{msg.name}}</p>
               <p class="body">{{msg.body}}</p>
               <p class="date">{{msg.date}}</p>
@@ -41,6 +44,18 @@
         isLogout: true
       };
     },
+    // computed: {
+    //   classObject: function () {
+    //     if (this.user.displayName == this.postName) {
+    //       this.isActive = true
+    //     } else {
+    //       this.isActive = false
+    //     }
+    //     return {
+    //       active: this.isActive
+    //     }
+    //   }
+    // },
     methods: {
       login() {
         console.log("in login");
@@ -59,6 +74,7 @@
             console.log(user.displayName);
             console.log(user.email);
             this.getPosts();
+            this.messageInfo();
           })
           .catch(function (error) {
             alert("error" + error.message);
@@ -107,37 +123,41 @@
             this.messages = data.val();
           });
       },
-      messageInfo() {
-        console.log(this.user.displayName)
-        console.log(this.messages)
-        for (var key in this.messages) {
-          this.postName = this.messages[key].name
-          console.log(this.postName)
-          if (this.user.displayName == this.postName) {
-            this.isActive = true
-          } else {
-            this.isActive = false
-          }
-
-        }
+      messageInfo(theMessage) {
+        // console.log(this.user.displayName)
+        // console.log(this.messages)
+        // for (var key in this.messages) {
+        //   this.postName = this.messages[key].name
+        //   console.log(this.postName)
+        //   if (this.user.displayName == this.postName) {
+        //     this.isActive = true
+        //   } else {
+        //     this.isActive = false
+        //   }
+        //   console.log(this.isActive)
+        return theMessage == this.user.displayName
       }
     }
   }
 </script>
 <style>
-  /* .loginPage {
-    display: block;
-  } */
-  /* .loginPage{
-     
-  } */
   .container {
     max-height: 400px;
   }
 
-  /* .afterLogin{
-    margin-bottom: 40%;
-  } */
+  .active {
+    /* background-color: chocolate; */
+    float: right;
+    word-break: break-all;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-end; */
+  }
+
   .pannel {
     border-style: groove;
     box-sizing: border-box;
@@ -193,12 +213,14 @@
   }
 
   .chatbox {
-    background-color: darkred;
+    /* background-color: darkred; */
+    /* float: left; */
     opacity: 0.6;
-    width: 280px;
+    /* width: 300px; */
     border-radius: 10px;
     padding-left: 2%;
     padding-right: 2%;
+    word-break: break-all;
   }
 
   p.name {
@@ -214,6 +236,8 @@
   p.body {
     color: #ffffff;
     font-size: 18px;
+    word-break: break-all;
+
   }
 
   /* label{
