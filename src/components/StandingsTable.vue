@@ -1,7 +1,8 @@
 <template>
 <div class="matchTable">  
-   
+  <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">  
 <OneStanding  v-for="(match, index) in allStandings" :OneMatchStanding='match' :key="index" />
+  </v-container>
 </div>
 </template>
 <script> 
@@ -16,6 +17,9 @@ export default {
 
 </script>
 <style>
+.panel{
+    max-height: 480px;
+  }
 .matchTable{
   margin-bottom:90%;
 }

@@ -1,6 +1,13 @@
 <template>
     <div class=" myHeader " align="left">
-        <TeamInfoHeader />
+       <div class=" theHeader " align="left">
+        <router-link to="/allteams">
+            <v-btn color="white darken-2" flat value="allTeams">
+                <!-- <v-icon large color="white darken-2">home</v-icon> -->
+                <span class="title">Teams</span>
+            </v-btn>
+        </router-link>
+    </div>
         <TeamData />
     </div>
 </template>
@@ -14,11 +21,6 @@
             TeamData,
             TeamInfoHeader
         },
-        // data() {
-        //     return {
-        //         isLoading: true,
-        //     }
-        // }
     }
 </script>
 <style>
@@ -26,19 +28,4 @@
         margin-top: 24%;
     }
 
-    /* .form-control {
-        width: 260px;
-        margin-top: 2%; */
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    /* }
-
-    form {
-        margin-left: 10%;
-    }
-
-    input {
-        margin-right: 5%;
-    } */
 </style>

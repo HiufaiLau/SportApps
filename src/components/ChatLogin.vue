@@ -1,12 +1,11 @@
 <template>
   <div class="loginPage">
     <div v-if="isLogout">
-      <button v-on:click="login()" class="btn btn-dark"> Login </button>
+      <button v-on:click="login()" class="login btn btn-dark"> Login </button>
     </div>
     <div v-else>
-      <button v-on:click="logout()" class="btn btn-dark"> Logout </button>
+      <button v-on:click="logout()" class="right btn btn-dark" align="left"> Logout </button>
       <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-
         <div class="chat">
           <div class="chatbox" v-for="(msg, index) in messages" :key="index">
             <p class="name">{{msg.name}}</p>
@@ -15,10 +14,11 @@
           </div>
         </div>
       </v-container>
+
+      <hr>
+      <input type="text" v-model="msg">
+      <button v-on:click="writeNewPost()" class="right btn btn-dark" align="right">Send</button>
     </div>
-    <hr>
-    <input type="text" v-model="msg">
-    <button v-on:click="writeNewPost()" class="btn btn-dark">Send</button>
   </div>
 </template>
 
@@ -54,6 +54,7 @@
             console.log(user);
             console.log(user.displayName);
             console.log(user.email);
+            this.getPosts();
           })
           .catch(function (error) {
             alert("error" + error.message);
@@ -92,7 +93,7 @@
           .ref("mainChat")
           .update(updates);
         this.msg = null;
-        this.getPosts();
+
       },
       getPosts() {
         firebase
@@ -101,7 +102,6 @@
           .on("value", data => {
             this.messages = data.val();
           });
-
       }
     }
   }
@@ -110,18 +110,30 @@
   /* .loginPage {
     display: block;
   } */
+  .container{
+    max-height: 400px;
+  }
   .pannel {
     border-style: groove;
     box-sizing: border-box;
     /* width: 100%; */
     /* height: 1000px; */
-    overflow: scroll;
+    /* overflow: scroll; */
     border: none;
     padding-top: 20px;
     margin-bottom: 8%;
     border-radius: 10px;
     background-color: rgb(102, 76, 76);
     opacity: 0.3;
+  }
+
+  .right {
+    float: right;
+    margin-top: -0.2%;
+  }
+
+  .login {
+    margin-top: 50%;
   }
 
   .chat {
@@ -139,6 +151,7 @@
   .btn-dark {
     color: #ff0018;
     font-size: 20px;
+
   }
 
   .btn-dark:hover {
@@ -157,6 +170,8 @@
     opacity: 0.6;
     width: 280px;
     border-radius: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
   p.name {

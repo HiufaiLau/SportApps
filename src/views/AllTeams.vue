@@ -45,12 +45,12 @@
             this.isLoading = false;
           });
       },
-       infoFilterByImage() {
-                this.infoToShow = this.teamsData.filter(oneTeamInfo => {
-                    return oneTeamInfo.name == this.teamsData.name
-                });
-                console.log(this.infoToShow)
-            }
+      //  infoFilterByImage() {
+      //           this.infoToShow = this.teamsData.filter(oneTeamInfo => {
+      //               return oneTeamInfo.name == this.teamsData.name
+      //           });
+      //           console.log(this.infoToShow)
+      //       }
     }
 
   }

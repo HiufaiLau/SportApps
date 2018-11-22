@@ -1,6 +1,8 @@
 <template>
     <div class="teamsLogos">
+        <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
         <oneTeamInfo v-for="(team, index) in allTeamsData" :teamInfo='allTeamsData' :oneTeam='team' :key="index" />
+        </v-container>
     </div>
 </template>
 
@@ -15,7 +17,8 @@
         methods: {
             test: function () {
                 console.log(this.allTeamsData)
-            }
+            },
+
         },
         created() {
             this.test()
@@ -35,5 +38,8 @@
 
     .arrow {
         margin-bottom: 3%;
+    }
+    .panel{
+        max-height: 535px;
     }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <dir>
+    <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
     <div class="container" align="center" v-for="(match, index) in allMatches" :key="index">
       <OneMatchSchedule :oneMatch='match' :twoLogos='getBothLogos(match)' />
       <!-- <OneMatchSchedule :oneMatch='match' :homeLogo='getBothLogos(match)' :awayLogo='getBothLogos(match)'/>  
       in this case, i have two props to passing the data, so i need two function() to filter the data-->
     </div>
+    </v-container>
   </dir>
 </template>
 <script>
@@ -34,6 +36,9 @@
   }
 </script>
 <style>
+.panel{
+    max-height: 500px;
+  }
   a {
     color: #ff2d35;
     text-decoration: none;
@@ -56,13 +61,13 @@
   .matchTable {
     border-style: groove;
     box-sizing: border-box;
-    width: 310px;
+    /* width: 310px; */
     height: 260px;
     border: none;
     /* align-content: center;
     align-self: center; */
     padding-top: 20px;
-    margin-bottom: 18%;
+    /* margin-bottom: 18%; */
     border-radius: 10px;
     background-color: darkred;
     opacity: 0.7;

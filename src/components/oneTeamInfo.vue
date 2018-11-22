@@ -4,8 +4,9 @@
 
             <div class="col d-flex">
                 <router-link :to="{ name: 'teamdetails', params: { dataToPass: this.teamInfo } }">
-                <p>{{oneTeam.name}}</p>
-                    <img :src="oneTeam.crestUrl" alt="team-icon" height="150" width="150">
+                    <p>{{oneTeam.name}}</p>
+                    <img :src="oneTeam.crestUrl"  alt="team-icon" height="150" width="150"> 
+                    <!-- v-on:image="infoFilterByImage()" -->
                 </router-link>
             </div>
         </div>
@@ -15,14 +16,28 @@
 <script>
     export default {
         name: "oneTeamInfo",
-        props:['oneTeam', 'teamInfo']
+        props: ['oneTeam', 'teamInfo'],
+        // data() {
+        //     return {
+        //         infoToShow: []
+        //     }
+        // },
+        // methods: {
+        //     infoFilterByImage() {
+        //         this.infoToShow = this.teamInfo.filter(oneTeamInfo => {
+        //             return oneTeamInfo.name == this.teamInfo.name
+        //         });
+        //         console.log(this.infoToShow)
+        //     },
+        // }
     }
 </script>
 <style>
-p{
+    p {
         color: darkred;
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
+
     .teamsLogos {
         margin-bottom: 18%;
         width: 100%;

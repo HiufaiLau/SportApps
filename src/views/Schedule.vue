@@ -1,13 +1,8 @@
 <template>
   <div class="schedule">
-    <!-- <div v-if="isLoading">
-      <p>Loading...</p>
-    </div>
-    <div v-else> -->
     <MatchScheduleHeader />
     <MatchScheduleDate />
     <MatchSchedule :allMatches='matchesToShow' :allLogos="getLogo" />
-    <!-- </div> -->
   </div>
 </template>
 <script>
