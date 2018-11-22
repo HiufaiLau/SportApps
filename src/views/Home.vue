@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <!-- <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center"> -->
       <HomePage />
-  </v-container>
+  <!-- </v-container> -->
 </template>
 
 <script>
@@ -17,3 +17,9 @@
     }
   }
 </script>
+<style>
+/* .panel{
+  margin-top:40%;
+    max-height: 800px;
+  } */
+</style>

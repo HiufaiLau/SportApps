@@ -1,7 +1,7 @@
 <template>
   <div class="teams">
     <TeamInfoHeader />
-    <TeamInfo :allTeamsData='teamsData' />
+    <TeamInfo :allTeamsData='teamsData'/>
   </div>
 </template>
 

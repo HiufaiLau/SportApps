@@ -1,17 +1,12 @@
 <template>
   <div class="schedule">
-    <!-- <div v-if="isLoading">
-      <p>Loading...</p>
-    </div>
-    <div v-else> -->
-      <StandingsHeader />
-      <form class="form-inline" align="center">
-        <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team"
-          aria-label="Search">
-      </form>
-      <StandingsTable :allStandings='filterTheTeams' />
-    </div>
-  <!-- </div> -->
+    <StandingsHeader />
+    <form class="form-inline" align="center">
+      <input v-model="searchTeam" class="form-control" align="center" type="search" placeholder="Search the team"
+        aria-label="Search">
+    </form>
+    <StandingsTable :allStandings='filterTheTeams' />
+  </div>
 </template>
 <script>
   // @ is an alias to /src

@@ -3,14 +3,16 @@
     <div v-if="isLogout">
       <button v-on:click="login()" class="login btn btn-dark"> Login </button>
     </div>
-    <div v-else>
+    <div class="afterLogin" v-else>
       <button v-on:click="logout()" class="right btn btn-dark" align="left"> Logout </button>
       <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-        <div class="chat">
-          <div class="chatbox" v-for="(msg, index) in messages" :key="index">
-            <p class="name">{{msg.name}}</p>
-            <p class="body">{{msg.body}}</p>
-            <p class="date">{{msg.date}}</p>
+        <div :class="{active: isActive}">
+          <div class="chat">
+            <div class="chatbox" v-for="(msg, index) in messages" :key="index">
+              <p class="name">{{msg.name}}</p>
+              <p class="body">{{msg.body}}</p>
+              <p class="date">{{msg.date}}</p>
+            </div>
           </div>
         </div>
       </v-container>
@@ -34,6 +36,8 @@
         msg: "",
         user: null,
         messages: [],
+        postName: "",
+        isActive: true,
         isLogout: true
       };
     },
@@ -102,6 +106,20 @@
           .on("value", data => {
             this.messages = data.val();
           });
+      },
+      messageInfo() {
+        console.log(this.user.displayName)
+        console.log(this.messages)
+        for (var key in this.messages) {
+          this.postName = this.messages[key].name
+          console.log(this.postName)
+          if (this.user.displayName == this.postName) {
+            this.isActive = true
+          } else {
+            this.isActive = false
+          }
+
+        }
       }
     }
   }
@@ -110,9 +128,16 @@
   /* .loginPage {
     display: block;
   } */
-  .container{
+  /* .loginPage{
+     
+  } */
+  .container {
     max-height: 400px;
   }
+
+  /* .afterLogin{
+    margin-bottom: 40%;
+  } */
   .pannel {
     border-style: groove;
     box-sizing: border-box;
@@ -133,7 +158,8 @@
   }
 
   .login {
-    margin-top: 50%;
+    /* margin-top: 50%; */
+
   }
 
   .chat {
@@ -141,6 +167,7 @@
     height: 800;
     overflow: scroll;
     word-break: break-all;
+
   }
 
   button {

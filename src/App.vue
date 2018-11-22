@@ -124,9 +124,10 @@
   }
 
   .backgroundImage {
+
     background-color: black;
     /* display: block; */
-    padding-bottom: 800px;
+    padding-bottom: 1000px;
     background-image: url("./assets/Kick.jpg");
     /* The image used */
     background-color: red;

@@ -1,9 +1,8 @@
 <template>
     <div class="teamsLogos">
         <div class="row">
-
             <div class="col d-flex">
-                <router-link :to="{ name: 'teamdetails', params: { dataToPass: this.teamInfo } }">
+                <router-link :to="{ name: 'teamdetails', params: { dataToPass: this.oneTeam } }">
                     <p>{{oneTeam.name}}</p>
                     <img :src="oneTeam.crestUrl"  alt="team-icon" height="150" width="150"> 
                     <!-- v-on:image="infoFilterByImage()" -->
@@ -27,6 +26,7 @@
         //         this.infoToShow = this.teamInfo.filter(oneTeamInfo => {
         //             return oneTeamInfo.name == this.teamInfo.name
         //         });
+        
         //         console.log(this.infoToShow)
         //     },
         // }

@@ -1,13 +1,13 @@
 <template>
     <div class=" myHeader " align="left">
-       <div class=" theHeader " align="left">
-        <router-link to="/allteams">
-            <v-btn color="white darken-2" flat value="allTeams">
-                <!-- <v-icon large color="white darken-2">home</v-icon> -->
-                <span class="title">Teams</span>
-            </v-btn>
-        </router-link>
-    </div>
+        <div class=" theHeader " align="left">
+            <router-link to="/allteams">
+                <v-btn color="white darken-2" flat value="allTeams">
+                    <!-- <v-icon large color="white darken-2">home</v-icon> -->
+                    <span class="title">Teams</span>
+                </v-btn>
+            </router-link>
+        </div>
         <TeamData />
     </div>
 </template>
@@ -27,5 +27,4 @@
     .myHeader {
         margin-top: 24%;
     }
-
 </style>

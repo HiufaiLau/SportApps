@@ -1,7 +1,7 @@
 <template>
     <div class="teamsLogos">
         <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-        <oneTeamInfo v-for="(team, index) in allTeamsData" :teamInfo='allTeamsData' :oneTeam='team' :key="index" />
+            <oneTeamInfo v-for="(team, index) in allTeamsData" :teamInfo='allTeamsData' :oneTeam='team' :key="index" />
         </v-container>
     </div>
 </template>
@@ -26,6 +26,10 @@
     }
 </script>
 <style>
+    .panel {
+        max-height: 480px;
+    }
+
     .teamsLogos {
         margin-bottom: 18%;
     }
@@ -39,7 +43,8 @@
     .arrow {
         margin-bottom: 3%;
     }
-    .panel{
+
+    .panel {
         max-height: 535px;
     }
 </style>
