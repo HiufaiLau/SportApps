@@ -17,7 +17,7 @@
 </script>
 <style>
   .panel {
-    max-height: 480px;
+    /* max-height: 480px; */
   }
 
   .matchTable {

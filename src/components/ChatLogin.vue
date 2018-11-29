@@ -10,7 +10,7 @@
       <!-- <div :class="classObject"> -->
       <div class="chat" style="height:400px;">
         <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-          <div class="chatbox static" v-for="(msg, index) in messages" :key="index">
+          <div class="chatbox static" style="width:150px" v-for="(msg, index) in messages" :key="index">
             <div :class="{active: messageInfo(msg.name)}">
               <p class="name">{{msg.name}}</p>
               <p class="body">{{msg.body}}</p>
@@ -146,35 +146,34 @@
   }
 
   .active {
-    /* background-color: chocolate; */
-    /* float: right; */
+    background-color: #96050070;
+    opacity: 0.8;
+     /* float: right; */
     word-break: break-all;
-    /* display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    width: 200px; */
-    /* display: flex;
+    /* width: 200px; */
+    display: flex;
     flex-direction: column;
-    align-items: flex-end; */
+    align-items: flex-end;
   }
 
   .pannel {
     border-style: groove;
-    box-sizing: border-box;
-    /* width: 100%; */
-    /* height: 1000px; */
-    /* overflow: scroll; */
-    border: none;
+    box-sizing: border-box; 
+     width: 100%;
+    height: 1000px;
+    overflow: scroll;
+    /* border: none;
     padding-top: 20px;
-    padding-bottom: 900px;
+    padding-bottom: 900px; */
     border-radius: 10px;
     background-color: rgb(102, 76, 76);
-    opacity: 0.3;
+    opacity: 0.3; 
   }
 
   .right {
-    /* float: right; */
-    margin-top: -0.2%;
+    /* float: left; */
+    /* margin-top: -0.2%; */
   }
 
   .login {
@@ -184,25 +183,25 @@
 
   .chat {
     /* width: 340px; */
-    height: 800;
+    /* height: 800;
     overflow: scroll;
-    word-break: break-all;
+    word-break: break-all; */
 
   }
 
   button {
-    margin: 30px;
-    padding: 40px;
+    /* margin: 30px;
+    padding: 40px; */
   }
 
   .btn-dark {
-    color: #ff0018;
-    font-size: 20px;
+    /* color: #ff0018;
+    font-size: 20px; */
 
   }
 
   .btn-dark:hover {
-    color: #936b6b;
+    /* color: #936b6b; */
   }
 
   input {
@@ -213,14 +212,15 @@
   }
 
   .chatbox {
-    /* background-color: darkred; */
+    background-color: rgb(219, 119, 61);
     /* float: left; */
-    opacity: 0.6;
+    opacity: 0.8;
     /* width: 300px; */
     border-radius: 10px;
-    padding-left: 2%;
+    /* padding-left: 2%;
     padding-right: 2%;
-    word-break: break-all;
+    word-break: break-all;  */
+    margin-bottom: 3%;
   }
 
   p.name {

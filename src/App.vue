@@ -115,7 +115,7 @@
   }
 
   .color {
-    background-color: black;
+    background-color: rgb(56, 55, 55);
   }
 
   .homeItems {

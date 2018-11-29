@@ -1,6 +1,6 @@
 <template>
   <div class="homeHeader row" align="center">
-
+     <v-container class="content panel panel-default" pre-scrollable scroll-y fixed align="center" style="max-height: 580px;">
     <div class="title col mt-6">
       <router-link :to="{ name: 'schedule', params: { dataToPass: this.onlyLogosAndNames} }">
         <img src="../assets/standing2.jpg" height="200" width="320">
@@ -25,7 +25,7 @@
         <h3>Chatroom</h3>
       </router-link>
     </div>
-
+     </v-container>
   </div>
 </template>
 
@@ -73,6 +73,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+ .panel {
+        /* height: 600px; */
+    }
+
   .homeHeader {
     /* padding-top: 70%; */
     /* padding-bottom: 10%;  */
