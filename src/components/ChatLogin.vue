@@ -8,10 +8,10 @@
 
       <!-- <div :class=" messageInfo()"> -->
       <!-- <div :class="classObject"> -->
-      <div class="chat" style="height:400px;">
+      <div class="chat" style="height:400px;"> 
         <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
           <div class="chatbox static" style="width:150px" v-for="(msg, index) in messages" :key="index">
-            <div :class="{active: messageInfo(msg.name)}">
+            <div :class="{active: messageInfo(msg.name)}" >
               <p class="name">{{msg.name}}</p>
               <p class="body">{{msg.body}}</p>
               <p class="date">{{msg.date}}</p>

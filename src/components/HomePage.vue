@@ -1,6 +1,6 @@
 <template>
   <div class="homeHeader row" align="center">
-     <v-container class="content panel panel-default" pre-scrollable scroll-y fixed align="center" style="max-height: 580px;">
+     <v-container class="content panel panel-default" pre-scrollable scroll-y fixed align="center" style="max-height: 580px;width:400px;">
     <div class="title col mt-6">
       <router-link :to="{ name: 'schedule', params: { dataToPass: this.onlyLogosAndNames} }">
         <img src="../assets/standing2.jpg" height="200" width="320">
