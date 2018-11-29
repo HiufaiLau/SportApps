@@ -1,5 +1,5 @@
 <template>
-  <div class="teams">
+  <div class="teams" >
     <TeamInfoHeader />
     <TeamInfo :allTeamsData='teamsData'/>
   </div>

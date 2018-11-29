@@ -1,5 +1,7 @@
 <template>
-  <div class="panel text-xs-center">
+
+  <div class="panel text-xs-center" >
+     <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
     <v-expansion-panel style="background-color:darkred;">
       <v-expansion-panel-content style="background-color:darkred;">
         <div slot="header" style="font-size:20px;">{{dataOneTeam.name}}</div>
@@ -16,6 +18,7 @@
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
+     </v-container>
     <!-- <v-expansion-panel style="background-color:darkred;">
       <v-expansion-panel-content style="background-color:darkred;">
         <div slot="header" style="font-size:20px;">{{dataOneTeam.name}}</div>
@@ -47,7 +50,7 @@
 </script>
 <style>
   .panel {
-    margin-bottom: 91%;
+    /* margin-bottom: 91%; */
     opacity: 0.9;
     background-color: #ffffff00;
   }

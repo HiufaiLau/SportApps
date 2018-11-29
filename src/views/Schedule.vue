@@ -1,5 +1,5 @@
 <template>
-  <div class="schedule">
+  <div class="schedule" >
     <MatchScheduleHeader />
     <MatchScheduleDate />
     <MatchSchedule :allMatches='matchesToShow' :allLogos="getLogo" />

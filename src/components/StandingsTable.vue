@@ -21,7 +21,7 @@
   }
 
   .matchTable {
-    margin-bottom: 90%;
+    /* margin-bottom: 90%; */
   }
 
   .btn {

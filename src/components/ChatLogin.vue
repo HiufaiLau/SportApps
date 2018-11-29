@@ -1,15 +1,15 @@
 <template>
-  <div class="loginPage">
+  <div class="loginPage" >
     <div v-if="isLogout">
-      <button v-on:click="login()" class="login btn btn-dark"> Login </button>
+      <button v-on:click="login()" class="login btn btn-dark">Login</button>
     </div>
     <div class="afterLogin" v-else>
-      <button v-on:click="logout()" class="right btn btn-dark" align="left"> Logout </button>
-      <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
+      <button v-on:click="logout()" class="right btn btn-dark" align="left">Logout</button>
 
-        <!-- <div :class=" messageInfo()"> -->
-        <!-- <div :class="classObject"> -->
-        <div class="chat">
+      <!-- <div :class=" messageInfo()"> -->
+      <!-- <div :class="classObject"> -->
+      <div class="chat" style="height:400px;">
+        <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
           <div class="chatbox static" v-for="(msg, index) in messages" :key="index">
             <div :class="{active: messageInfo(msg.name)}">
               <p class="name">{{msg.name}}</p>
@@ -17,8 +17,8 @@
               <p class="date">{{msg.date}}</p>
             </div>
           </div>
-        </div>
-      </v-container>
+        </v-container>
+      </div>
 
       <hr>
       <input type="text" v-model="msg">
@@ -142,12 +142,12 @@
 </script>
 <style>
   .container {
-    max-height: 400px;
+    /* max-height: 1000px; */
   }
 
   .active {
     /* background-color: chocolate; */
-    float: right;
+    /* float: right; */
     word-break: break-all;
     /* display: flex;
     flex-direction: column;
@@ -166,14 +166,14 @@
     /* overflow: scroll; */
     border: none;
     padding-top: 20px;
-    margin-bottom: 8%;
+    padding-bottom: 900px;
     border-radius: 10px;
     background-color: rgb(102, 76, 76);
     opacity: 0.3;
   }
 
   .right {
-    float: right;
+    /* float: right; */
     margin-top: -0.2%;
   }
 

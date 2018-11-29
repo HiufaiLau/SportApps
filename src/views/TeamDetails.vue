@@ -1,5 +1,5 @@
 <template>
-    <div class=" myHeader " align="left">
+    <div class=" myHeader " align="left" style="height:557px;" >
         <div class=" theHeader " align="left">
             <router-link to="/allteams">
                 <v-btn color="white darken-2" flat value="allTeams">

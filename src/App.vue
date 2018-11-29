@@ -2,18 +2,20 @@
   <v-app>
     <div class="color">
       <v-container class="backgroundImage">
-        <v-container align="center">
+        <v-container align="center" style="height:714px;">
           <div class="logo row fixed-top navbar-expand-lg navbar-light">
             <div class="col mt-2 " align="center">
               <img src="./assets/bundesliga.png" height="120" width="100">
             </div>
           </div>
-        </v-container>
-        <v-content>
+        
+        <v-content fixed>
           <router-view> </router-view>
         </v-content>
+
         <v-card flat>
           <v-bottom-nav :active.sync="bottomNav" :value="true" fixed shift class="bottom" height="70px">
+
             <router-link :to="{ name: 'schedule', params: { dataToPass: this.onlyLogosAndNames} }" class="bottomNav">
               <v-btn color="red darken-2" flat value="shcedule">
                 <span>Matches</span>
@@ -34,16 +36,20 @@
                 <v-icon large color="red">fas fa-users</v-icon>
               </v-btn>
             </router-link>
+
             <router-link to="/chat" class="bottomNav">
               <v-btn color="red darken-2" flat value="chat">
                 <span>Chat</span>
                 <v-icon large color="red">far fa-comments</v-icon>
               </v-btn>
             </router-link>
+
           </v-bottom-nav>
         </v-card>
       </v-container>
+      </v-container>
     </div>
+
   </v-app>
 </template>
 
@@ -118,30 +124,33 @@
 
   }
 
-  .container.backgroundImage {
-    padding-bottom: 1000px;
+  /* .container.backgroundImage {
+    padding-bottom: 80px;
     background-color: black;
-  }
+  } */
 
   .backgroundImage {
-
+    background-size: 100% 100%;
+    content:"";
+    /* background-blend-mode: screen; */
     background-color: black;
     /* display: block; */
-    padding-bottom: 1000px;
+    padding-bottom: 80px;
     background-image: url("./assets/Kick.jpg");
     /* The image used */
-    background-color: red;
+    /* background-color: red; */
     /* Used if the image is unavailable */
     width: 100%;
-    height: auto;
+    height: 100%;
     background-position: center;
     /* Center the image */
     background-size: cover;
     /* Resize the background image to cover the entire container */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-right: 50%;
-    margin-top: -10%;
+     margin-right: 50%;
+    /* margin-top: -10%;  */
+    
     /* max-width: 100%; */
     /* opacity: 0.7; */
   }
