@@ -51,7 +51,7 @@
     },
     methods: {
       getFetch: function () {
-        fetch("http://api.jsonbin.io/b/5bf2a315269bb82f9330fa2d", {
+        fetch("https://api.jsonbin.io/b/5bf2a315269bb82f9330fa2d", {
             method: "GET",
             headers: {
               "Content-Type": "application/json"
