@@ -3,14 +3,15 @@
     <div v-if="isLogout">
       <button v-on:click="login()" class="login btn btn-dark">Login</button>
     </div>
-    <div class="afterLogin" v-else>
+    <div v-else>
+    <div class="afterLogin" >
       <button v-on:click="logout()" class="right btn btn-dark" align="left">Logout</button>
 
       <!-- <div :class=" messageInfo()"> -->
       <!-- <div :class="classObject"> -->
-      <div class="chat" style="height:400px;"> 
-        <v-container class="panel panel-default" pre-scrollable scroll-y fixed align="center">
-          <div class="chatbox static" style="width:150px" v-for="(msg, index) in messages" :key="index">
+      <div class="chat" > 
+        <v-container id="scrollme" class="panel panel-default" pre-scrollable scroll-y fixed align="center">
+          <div  class="chatbox static" v-for="(msg, index) in messages" :key="index">
             <div :class="{active: messageInfo(msg.name)}" >
               <p class="name">{{msg.name}}</p>
               <p class="body">{{msg.body}}</p>
@@ -19,10 +20,12 @@
           </div>
         </v-container>
       </div>
+      
 
       <hr>
       <input type="text" v-model="msg">
-      <button v-on:click="writeNewPost()" class="right btn btn-dark" align="right">Send</button>
+      <button v-on:click="writeNewPost()" class="right2 btn btn-dark" align="right">Send</button>
+    </div>
     </div>
   </div>
 </template>
@@ -56,6 +59,10 @@
     //     }
     //   }
     // },
+
+    //  updated() { 
+    //     this.scroll(); 
+    //     },  
     methods: {
       login() {
         console.log("in login");
@@ -81,6 +88,7 @@
           });
         this.isLogout = false
       },
+     
       logout() {
         firebase
           .auth()
@@ -113,11 +121,11 @@
           .ref("mainChat")
           .update(updates);
         this.msg = null;
-
+        this.scroll()
       },
       getPosts() {
         firebase
-          .database()
+          .database() 
           .ref("mainChat")
           .on("value", data => {
             this.messages = data.val();
@@ -136,22 +144,35 @@
         //   }
         //   console.log(this.isActive)
         return theMessage == this.user.displayName
-      }
+      },
+         scroll() {
+           console.log(document.getElementById('scrollme')) 
+          document.getElementById('scrollme').scrollTop = document.getElementById('scrollme').scrollHeight; 
+        },
+
     }
   }
 </script>
 <style>
+#scrollme{
+   /* height: 500px; */
+   position:absolute;
+   top:0px;
+   overflow-y: scroll;
+  margin-top:80%;
+  }
   .container {
     /* max-height: 1000px; */
   }
 
   .active {
-    background-color: #96050070;
+   background-color:#9b000085;
     opacity: 0.8;
+    border-radius: 10px;
      /* float: right; */
     word-break: break-all;
-    align-items: flex-start;
-    /* width: 200px; */
+    /* align-items: flex-start; */
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -160,8 +181,8 @@
   .pannel {
     border-style: groove;
     box-sizing: border-box; 
-     width: 100%;
-    height: 1000px;
+     /* width: 100%;
+    height: 1000px; */
     overflow: scroll;
     /* border: none;
     padding-top: 20px;
@@ -173,7 +194,13 @@
 
   .right {
     /* float: left; */
-    /* margin-top: -0.2%; */
+      position: absolute;
+        margin-top: -17%;
+        left: 74%
+  }
+  .right2 {
+    /* float: left; */
+    margin-left: 2%;
   }
 
   .login {
@@ -183,8 +210,8 @@
 
   .chat {
     /* width: 340px; */
-    /* height: 800;
-    overflow: scroll;
+    height: 800;
+    /* overflow: scroll;
     word-break: break-all; */
 
   }
@@ -212,10 +239,12 @@
   }
 
   .chatbox {
-    background-color: rgb(219, 119, 61);
-    /* float: left; */
+    background-color: #694749f5;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     opacity: 0.8;
-    /* width: 300px; */
+     width: 200px;
     border-radius: 10px;
     /* padding-left: 2%;
     padding-right: 2%;
@@ -239,6 +268,10 @@
     word-break: break-all;
 
   }
+
+  .pre-scrollable {
+    max-height: 450px;
+    }
 
   /* label{
   font-size: 1.5rem;
